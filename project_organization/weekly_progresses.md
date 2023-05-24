@@ -6,6 +6,9 @@ What we did:
 * Decide for model architecture (SOLOIST) :white_check_mark:
 * Decide for dataset (https://collegescorecard.ed.gov/data/documentation/) :white_check_mark:
 
+* Created a toy database, also I now know how they work (I think)
+* created an uncleaned version of the full database, we'll need to talk about the columns (= ontology)
+
 Our TODOs until next week:
 * Make a timeplan 
 * Create sql database from csv
