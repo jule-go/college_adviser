@@ -22,10 +22,6 @@
         ],
         "price category": [
             "expensive"
-        ],
-        "federal aid (Title 4)": [
-            "don't care",
-            "want it"
         ]
     },
     "key": "name",
@@ -55,20 +51,18 @@
         "debts",
         "salaries",
         "number of programs",
-        "employment rate"
+        "control"
     ],
     "system_requestable": [
         "price category",
         "state",
         "region",
-        "area of study",
-        "federal aid (Title 4)"
+        "area of study"
     ],
     "keyword": "college",
     "binary" : [
         "history",
         "computer science",
-        "...",
-        "federal aid (Title 4)"        
+        "..."      
     ]
 }

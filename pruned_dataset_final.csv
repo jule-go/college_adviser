@@ -1,0 +1,50 @@
+UNITID,NAME,ALIAS,CITY,STATE,REGION,URL,CONTROL,NUM_UGDS,ADM_RATE,SAT_AVG,COSTT4_A,NET_COST,EARNINGS_MDN,DEBT_MDN,COMPL_RATE,CIP04BACHL,CIP09BACHL,CIP11BACHL,CIP13BACHL,CIP14BACHL,CIP16BACHL,CIP22BACHL,CIP23BACHL,CIP26BACHL,CIP27BACHL,CIP38BACHL,CIP40BACHL,CIP42BACHL,CIP45BACHL,CIP50BACHL,CIP51BACHL,CIP52BACHL,CIP54BACHL,SUM
+104717,Grand Canyon University,GCU,Phoenix,AZ,6,www.gcu.edu/,3,64210,0.82835517213314,NULL,31393,21176,71157,12500,0.4474,0,1,1,1,1,1,0,1,1,0,0,1,0,1,1,1,1,1,20
+110422,California Polytechnic State University-San Luis Obispo,Cal Poly,San Luis Obispo,CA,8,calpoly.edu/,1,21090,0.32999816749129,NULL,28843,20633,76958,15396,0.8539,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,26
+110635,University of California-Berkeley,UC Berkeley,Berkeley,CA,8,www.berkeley.edu/,1,31811,0.14440417216841,NULL,37510,15240,81720,12000,0.9281,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,22
+122436,University of San Diego,USD,San Diego,CA,8,www.sandiego.edu/,2,5601,0.52701382102471,NULL,68002,28071,70606,19019,0.8002,1,1,1,0,1,1,0,1,1,1,1,1,1,1,1,0,1,1,18
+122612,University of San Francisco,NULL,San Francisco,CA,8,https://www.usfca.edu/,2,5937,0.70923475773288,1305,72280,37768,74615,19000,0.7561,1,1,1,0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,22
+122931,Santa Clara University,SCU,Santa Clara,CA,8,www.scu.edu/,2,5887,0.53982668566001,1418,72321,43228,88962,16845,0.9087,0,1,1,0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,20
+123961,University of Southern California,USC,Los Angeles,CA,8,www.usc.edu/,2,20619,0.12507215159578,1484,67045,25972,77241,16112,0.9201,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,24
+129242,Fairfield University,NULL,Fairfield,CT,1,fairfield.edu/,2,4548,0.55807164273315,1315,69035,43569,76721,23251,0.8394,0,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,21
+130794,Yale University,NULL,New Haven,CT,1,https://www.yale.edu/,2,6535,0.0531117696867,1526,79320,16341,85476,11648,0.9692,1,0,1,0,1,1,0,1,1,1,1,1,1,1,1,0,0,1,17
+131469,George Washington University,GWU|GW,Washington,DC,2,https://www.gwu.edu/,2,10929,0.49709942722866,1419,62835,26272,77757,19500,0.8366,0,1,1,0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,21
+131496,Georgetown University,Georgetown|GU,Washington,DC,2,www.georgetown.edu/,2,7395,0.1198378515328,1488,59760,24570,88039,13500,952,0,0,1,0,0,1,0,1,1,1,1,1,1,1,1,1,1,1,16
+139658,Emory University,NULL,Atlanta,GA,5,www.emory.edu/,2,7050,0.15602281623979,1480,72884,25424,71805,16750,0.9004,0,1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,21
+139755,Georgia Institute of Technology-Main Campus,Georgia Tech,Atlanta,GA,5,www.gatech.edu/,1,16566,0.15959861968761,1423,29364,14820,91543,20000,0.9192,1,1,1,0,1,1,0,0,1,1,0,1,1,1,1,0,1,1,16
+144050,University of Chicago,NULL,Chicago,IL,3,www.uchicago.edu/,2,7558,0.06478116606098,1535,81531,22690,90882,13368,959,0,0,1,0,1,1,0,1,1,1,1,1,1,1,1,1,0,1,19
+147767,Northwestern University,NULL,Evanston,IL,3,www.northwestern.edu/,2,8691,0.06971618103954,1529,81058,28230,83318,14000,0.9523,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,23
+152080,University of Notre Dame,Notre Dame | Fighting Irish | ND,Notre Dame,IN,3,www.nd.edu/,2,8950,0.1506640724135,1490,76883,32369,83696,19000,959,1,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,21
+162928,Johns Hopkins University,Johns Hopkins,Baltimore,MD,2,www.jhu.edu/,2,5727,0.07521194483107,NULL,65544,14254,95030,9000,0.9462,0,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,21
+164924,Boston College,NULL,Chestnut Hill,MA,1,www.bc.edu/,2,9797,0.19040807107363,1485,78200,38412,76701,17962,0.9078,0,1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,20
+166027,Harvard University,NULL,Cambridge,MA,1,www.harvard.edu/,2,7938,0.04011352230644,1534,74171,13259,104267,12500,0.9674,0,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,21
+166683,Massachusetts Institute of Technology,"MIT, M.I.T.",Cambridge,MA,1,web.mit.edu/,2,4629,0.04106498194945,NULL,63681,5084,129392,12462,962,1,1,1,0,1,1,0,1,1,1,1,1,0,1,1,0,1,1,16
+167358,Northeastern University,NULL,Boston,MA,1,www.northeastern.edu/,2,15645,0.18378874063048,1500,75732,34255,81396,22000,0.9057,1,1,1,0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,22
+168148,Tufts University,NULL,Medford,MA,1,https://www.tufts.edu/,2,6628,0.1143021988589,1506,78983,35683,74058,15043,0.9381,1,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,1,19
+170976,University of Michigan-Ann Arbor,U of Michigan|U of M|Univ of Michigan|U Michigan Ann Arbor|University of Michigan Ann Arbor,Ann Arbor,MI,3,https://umich.edu/,1,32063,0.20153493096572,NULL,31300,17086,76103,17625,0.9365,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,24
+171128,Michigan Technological University,Michigan Tech|MTU|Michigan Tech University|Mich Tech|Michigan Technological Univ|Michigan Tech Univ|MT,Houghton,MI,3,https://www.mtu.edu/,1,5701,0.85748041288396,1256,30572,15864,77290,20500,691,0,1,1,0,1,0,0,1,1,1,0,1,1,1,1,1,1,1,19
+179867,Washington University in St Louis,WashU,Saint Louis,MO,4,https://wustl.edu/,2,7713,0.13001724445501,1524,79586,27595,85837,15000,0.9312,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,22
+182670,Dartmouth College,"Dartmouth, Big Green",Hanover,NH,1,www.dartmouth.edu/,2,4533,0.06171533361546,1508,80184,33023,90893,15157,936,0,0,1,0,1,1,0,1,1,1,1,1,1,1,1,0,0,1,16
+185828,New Jersey Institute of Technology,NJIT,Newark,NJ,2,https://www.njit.edu/,1,8377,0.69139747797547,1314,29862,17093,77947,17500,0.7369,1,0,1,0,1,0,1,1,1,1,0,1,0,0,1,0,1,1,17
+186131,Princeton University,NULL,Princeton,NJ,2,www.princeton.edu/,2,5236,0.04380202654184,1517,68044,11080,93603,10000,0.9757,1,0,1,0,1,1,0,1,1,1,1,1,1,1,1,0,0,1,16
+190150,Columbia University in the City of New York,Columbia University,New York,NY,2,www.columbia.edu/,2,8832,0.04130256913762,1528,70999,12836,96713,18750,0.9736,1,0,1,0,1,1,0,1,1,1,1,1,1,1,1,1,0,1,19
+190415,Cornell University,NULL,Ithaca,NY,2,www.cornell.edu/,2,15451,0.08685069753636,1510,77047,29011,90531,13000,0.9414,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,25
+191241,Fordham University,NULL,Bronx,NY,2,www.fordham.edu/,2,9669,0.58303619665045,1402,70340,35320,70485,20500,0.8316,0,1,1,1,1,1,0,1,1,1,1,1,1,1,1,0,1,1,20
+193900,New York University,NULL,New York,NY,2,https://www.nyu.edu/,2,28556,0.12961043583864,1507,75348,39565,72083,18500,0.8687,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,24
+194310,Pace University,Pace University,New York,NY,2,www.pace.edu/,2,7820,0.87622504537205,1219,60887,27937,70079,17750,0.5909,0,1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,22
+194824,Rensselaer Polytechnic Institute,"RPI, Rensselaer",Troy,NY,2,www.rpi.edu/,2,5579,0.53017487712881,1450,75824,31456,89152,21995,0.8419,1,1,1,0,1,0,1,0,1,1,1,1,1,1,1,1,1,0,17
+195030,University of Rochester,NULL,Rochester,NY,2,https://www.rochester.edu/,2,6417,0.4054648723328,1455,77995,31171,75454,19000,0.8586,0,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,21
+198419,Duke University,NULL,Durham,NC,5,www.duke.edu/,2,6815,0.05888980544433,1516,78176,31416,92741,12000,0.9587,0,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,1,20
+199847,Wake Forest University,NULL,Winston-Salem,NC,5,www.wfu.edu/,2,5465,0.25178147268408,NULL,77231,29214,75161,19500,0.9025,0,1,1,1,1,1,0,1,1,1,1,1,1,1,1,0,1,1,19
+201645,Case Western Reserve University,CWRU|Case|Case Western Reserve,Cleveland,OH,3,www.case.edu/,2,5697,0.30238926336061,1483,71878,37702,75546,21488,0.8436,1,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,21
+211440,Carnegie Mellon University,Carnegie Mellon; CMU,Pittsburgh,PA,2,www.cmu.edu/,2,6880,0.13536600194552,1520,76870,37846,105185,20250,0.9277,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,24
+212054,Drexel University,Drexel,Philadelphia,PA,2,https://drexel.edu/,2,14308,0.82626959066021,1317,59319,23167,77980,20204,0.7822,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,26
+213543,Lehigh University,NULL,Bethlehem,PA,2,www.lehigh.edu/,2,5446,0.4597008577302,1422,71489,32698,88766,19500,0.8734,1,1,1,0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,19
+215062,University of Pennsylvania,"Penn, U of PA, U-Penn, U of P, Pennsylvania, UPenn, Pennsylvania University, University of Pennsylvania, Wharton, Wharton School of Business",Philadelphia,PA,2,www.upenn.edu/,2,10644,0.0586522757935,1523,65330,14851,100577,14000,0.9622,1,1,1,0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,21
+216597,Villanova University,NULL,Villanova,PA,2,www.villanova.edu/,2,7000,0.25243752560426,1437,75698,34784,85405,25000,0.9129,0,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,23
+217156,Brown University,NULL,Providence,RI,1,www.brown.edu/,2,7125,0.05514516406115,1517,80448,26308,72361,10000,0.9584,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,21
+221999,Vanderbilt University,NULL,Nashville,TN,5,www.vanderbilt.edu/,2,7104,0.07142857142857,1534,76044,22204,78257,12913,0.9338,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,20
+228246,Southern Methodist University,SMU,Dallas,TX,6,https://www.smu.edu/,2,6894,0.53127191584316,1448,76600,40452,76708,15311,0.8241,0,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,23
+233921,Virginia Polytechnic Institute and State University,Virginia Tech,Blacksburg,VA,5,www.vt.edu/,1,29699,0.56465496742283,1320,27755,20927,70429,19000,0.8661,1,1,1,0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,21
+234076,University of Virginia-Main Campus,University of Virginia  UVa  UVA,Charlottesville,VA,5,https://www.virginia.edu/,1,17041,0.20743782702049,1457,32289,20507,74942,15153,0.9371,1,0,1,0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,22
+243744,Stanford University,NULL,Stanford,CA,8,www.stanford.edu/,2,7645,0.03948008869499,1528,70869,7200,109840,9851,0.9552,0,1,1,0,1,1,0,1,1,1,1,1,1,1,1,0,0,1,17
