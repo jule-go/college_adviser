@@ -1,0 +1,74 @@
+{
+    "discourseAct": [
+        "ack",
+        "hello",
+        "none",
+        "silence",
+        "thanks",
+        "bad"
+    ],
+    "informable": {
+        "name": [
+            "University of Stuttgart"
+        ],
+        "city": [
+            "Stuttgart"
+        ],
+        "state": [
+            "BaWü"
+        ],
+        "region": [
+            "South"
+        ],
+        "price category": [
+            "expensive"
+        ],
+        "federal aid (Title 4)": [
+            "don't care",
+            "want it"
+        ]
+    },
+    "key": "name",
+    "method": [
+        "none",
+        "byconstraints",
+        "byprimarykey",
+        "finished",
+        "byalternatives",
+        "restart"
+    ],
+    "requestable": [
+        "name",
+        "city",
+        "state",
+        "region",
+        "price category",
+        "price",
+        "completion rate",
+        "history",
+        "computer science",
+        "...",
+        "URL",
+        "admission rate",
+        "average SAT (if existing)",
+        "number of students",
+        "debts",
+        "salaries",
+        "number of programs",
+        "employment rate"
+    ],
+    "system_requestable": [
+        "price category",
+        "state",
+        "region",
+        "area of study",
+        "federal aid (Title 4)"
+    ],
+    "keyword": "college",
+    "binary" : [
+        "history",
+        "computer science",
+        "...",
+        "federal aid (Title 4)"        
+    ]
+}
