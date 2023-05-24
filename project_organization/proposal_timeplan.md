@@ -17,11 +17,11 @@ Timeplan:
     - look into data 
     - look into model architectures
     - make timeplan / proposal
-    - create seql database from data
     - create a basic ontology
     - (evgl. include information on how to generate dialogs)
  * 24.05. - 06.06. (incl. holiday)
-    - generate dialogs
+    - create sql database from data
+    - generate dialogues
     - convert data into format for SOLOIST model
  * 07.06. - 13.06.
     - get familiar with SOLOIST architecture / usage
@@ -35,7 +35,7 @@ Timeplan:
  * 28.06. - 04.07.
     - buffer
  * 05.07. - 11.07.
-    - prepare demo of our dialog system
+    - prepare demo of our dialogue system
     - prepare presentation
  * 12.07. PRESENTATION
  * ... - 18.08.
