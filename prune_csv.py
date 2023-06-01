@@ -40,7 +40,7 @@ prunes by student number, bachelor areas covered and income.
 Designed for reordered and reduced dataset, includes binarization of CIP values
 """
 def prune3():
-    out_file = open("pruned_dataset_final.csv", "w")
+    out_file = open("pruned_dataset_xxx.csv", "w")
     with open("full_dataset_working.csv", "r") as f:
         reader = csv.reader(f, delimiter=",")
         writer = csv.writer(out_file, delimiter=',', quotechar='"', lineterminator="\n")
@@ -55,6 +55,33 @@ def prune3():
                     x = row[ix['NPT4_PUB']] if row[ix['NPT4_PUB']] != "NULL" else row[ix['NPT4_PRIV']]
                     binaries = [int(bool(int(val))) for val in row[17:ix["SUM"]]]  # some have values > 1, these are mapped to 1 --> binarization
                     row = row[:12] + [x] + row[14:17] + binaries + [row[ix['SUM']]]
+                    writer.writerow(row)
+
+
+"""
+Prunes a csv table of colleges: Includes study areas, allows NULL SAT scores, 
+prunes by student number, bachelor areas covered and income.
+Designed for reordered and reduced dataset, includes binarization of CIP values.
+Doesn't include net costs, does include cost bins of total cost
+"""
+def prune4():
+    out_file = open("pruned_dataset_xxx.csv", "w")
+    with open("full_dataset_working.csv", "r") as f:
+        reader = csv.reader(f, delimiter=",")
+        writer = csv.writer(out_file, delimiter=',', quotechar='"', lineterminator="\n")
+        header = next(reader)
+        ix = {heading: i for i, heading in enumerate(header)}
+        print(ix)
+        header = header[:12] + ["PRICE_RANGE"] + header[14:]
+        writer.writerow(header)
+        for row in reader:
+            if not ("PrivacySuppressed" in row[ix['DEBT_MDN']] or "NULL" in row[3:10] + row[11:12] + row [14:36]):   
+                if int(row[ix['NUM_UGDS']]) > 4500 and int(row[ix['SUM']]) > 15 and int(row[ix['EARNINGS_MDN']]) > 70000:
+                    binaries = [int(bool(int(val))) for val in row[17:ix["SUM"]]]  # some have values > 1, these are mapped to 1 --> binarization
+                    cost = int(row[ix["COSTT4_A"]])
+                    # puts price into one of four bins (I hate the way I implemented it, but hey, one line!)
+                    price_range = ["affordable", "pricey", "expensive", "very expensive"][sum([cost>55000, cost>70000, cost>76000])]
+                    row = row[:12] + [price_range] + row[14:17] + binaries + [row[ix['SUM']]]
                     writer.writerow(row)
 
 def get_all_cip():
@@ -82,4 +109,4 @@ def get_all_cip():
     print(len(bachl_list))
 
 
-prune3()
+prune4()
