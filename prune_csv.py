@@ -1,5 +1,18 @@
 import csv
 
+region_dict = {"1": "New England", "2": "Mid East", "3": "Great Lakes", "4": "Plains", "5": "Southeast", 
+               "6": "Southwest", "7": "Rocky Mountains", "8": "Far West"}
+
+# curtesy of chatgpt
+state_dict = {'AL': 'Alabama', 'AK': 'Alaska', 'AZ': 'Arizona', 'AR': 'Arkansas', 'CA': 'California', 'DC': 'Washington, DC',
+    'CO': 'Colorado', 'CT': 'Connecticut', 'DE': 'Delaware', 'FL': 'Florida', 'GA': 'Georgia', 'HI': 'Hawaii',
+    'ID': 'Idaho', 'IL': 'Illinois', 'IN': 'Indiana', 'IA': 'Iowa', 'KS': 'Kansas', 'KY': 'Kentucky', 'LA': 'Louisiana',
+    'ME': 'Maine', 'MD': 'Maryland', 'MA': 'Massachusetts', 'MI': 'Michigan', 'MN': 'Minnesota', 'MS': 'Mississippi',
+    'MO': 'Missouri', 'MT': 'Montana', 'NE': 'Nebraska', 'NV': 'Nevada', 'NH': 'New Hampshire', 'NJ': 'New Jersey',
+    'NM': 'New Mexico', 'NY': 'New York', 'NC': 'North Carolina', 'ND': 'North Dakota', 'OH': 'Ohio', 'OK': 'Oklahoma',
+    'OR': 'Oregon', 'PA': 'Pennsylvania', 'RI': 'Rhode Island', 'SC': 'South Carolina', 'SD': 'South Dakota', 'TN': 'Tennessee',
+    'TX': 'Texas', 'UT': 'Utah', 'VT': 'Vermont', 'VA': 'Virginia', 'WA': 'Washington', 'WV': 'West Virginia', 'WI': 'Wisconsin', 'WY': 'Wyoming'}
+
 """
 Prunes a csv table of colleges: No study areas, combines NPT costs, excludes NULL SAT scores, prunes by student number
 """
@@ -108,5 +121,35 @@ def get_all_cip():
                 writer.writerow(row)
     print(len(bachl_list))
 
+"""
+Refines a pruned csv table of colleges with final columns done:
+- rounds numbers for students, cost, debt, earnings, admission rate, completion rate (the latter 2 are now percentages)
+- writes out states, regions, and control ("public"/"private")
+"""
+def get_v3():
+    out_file = open("pruned_dataset_final_v3.csv", "w")
+    with open("pruned_dataset_final_v2.csv", "r") as f:
+        reader = csv.reader(f, delimiter=",")
+        writer = csv.writer(out_file, delimiter=',', quotechar='"', lineterminator="\n")
+        header = next(reader)
+        ix = {heading: i for i, heading in enumerate(header)}
+        print(ix)
+        writer.writerow(header)
+        for row in reader:
+            row[ix["CONTROL"]] = "private" if int(row[ix["CONTROL"]]) > 1 else "public"
+            row[ix["REGION"]] = region_dict[row[ix["REGION"]]]
+            row[ix["STATE"]] = state_dict[row[ix["STATE"]]]
+            
+            row[ix["NUM_UGDS"]] = str(round(int(row[ix["NUM_UGDS"]]), -2))
+            row[ix["ADM_RATE"]] = str(round(100 * float(row[ix["ADM_RATE"]]), 1)) + '%'
 
-prune4()
+            compl_rate = float(row[ix["COMPL_RATE"]])  #some are not percentages, but #/1000 oder so
+            if compl_rate > 1: compl_rate /= 1000
+            row[ix["COMPL_RATE"]] = str(round(100 *compl_rate, 1)) + '%' 
+
+            row[ix["COSTT4_A"]] = str(round(int(row[ix["COSTT4_A"]]), -2))
+            row[ix["DEBT_MDN"]] = str(round(int(row[ix["DEBT_MDN"]]), -3))
+            row[ix["EARNINGS_MDN"]] = str(round(int(row[ix["EARNINGS_MDN"]]), -3))
+            writer.writerow(row)
+
+get_v3()

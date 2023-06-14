@@ -1,0 +1,50 @@
+UNITID,NAME,ALIAS,CITY,STATE,REGION,URL,CONTROL,NUM_UGDS,ADM_RATE,SAT_AVG,COSTT4_A,PRICE_RANGE,EARNINGS_MDN,DEBT_MDN,COMPL_RATE,CIP04BACHL,CIP09BACHL,CIP11BACHL,CIP13BACHL,CIP14BACHL,CIP16BACHL,CIP22BACHL,CIP23BACHL,CIP26BACHL,CIP27BACHL,CIP38BACHL,CIP40BACHL,CIP42BACHL,CIP45BACHL,CIP50BACHL,CIP51BACHL,CIP52BACHL,CIP54BACHL,SUM
+104717,Grand Canyon University,GCU,Phoenix,Arizona,Southwest,www.gcu.edu/,private,64200,82.8%,NULL,31400,affordable,71000,12000,44.7%,0,1,1,1,1,1,0,1,1,0,0,1,0,1,1,1,1,1,20
+110422,California Polytechnic State University-San Luis Obispo,Cal Poly,San Luis Obispo,California,Far West,calpoly.edu/,public,21100,33.0%,NULL,28800,affordable,77000,15000,85.4%,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,26
+110635,University of California-Berkeley,UC Berkeley,Berkeley,California,Far West,www.berkeley.edu/,public,31800,14.4%,NULL,37500,affordable,82000,12000,92.8%,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,22
+122436,University of San Diego,USD,San Diego,California,Far West,www.sandiego.edu/,private,5600,52.7%,NULL,68000,pricey,71000,19000,80.0%,1,1,1,0,1,1,0,1,1,1,1,1,1,1,1,0,1,1,18
+122612,University of San Francisco,NULL,San Francisco,California,Far West,https://www.usfca.edu/,private,5900,70.9%,1305,72300,expensive,75000,19000,75.6%,1,1,1,0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,22
+122931,Santa Clara University,SCU,Santa Clara,California,Far West,www.scu.edu/,private,5900,54.0%,1418,72300,expensive,89000,17000,90.9%,0,1,1,0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,20
+123961,University of Southern California,USC,Los Angeles,California,Far West,www.usc.edu/,private,20600,12.5%,1484,67000,pricey,77000,16000,92.0%,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,24
+129242,Fairfield University,NULL,Fairfield,Connecticut,New England,fairfield.edu/,private,4500,55.8%,1315,69000,pricey,77000,23000,83.9%,0,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,21
+130794,Yale University,NULL,New Haven,Connecticut,New England,https://www.yale.edu/,private,6500,5.3%,1526,79300,very expensive,85000,12000,96.9%,1,0,1,0,1,1,0,1,1,1,1,1,1,1,1,0,0,1,17
+131469,George Washington University,GWU|GW,Washington,"Washington, DC",Mid East,https://www.gwu.edu/,private,10900,49.7%,1419,62800,pricey,78000,20000,83.7%,0,1,1,0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,21
+131496,Georgetown University,Georgetown|GU,Washington,"Washington, DC",Mid East,www.georgetown.edu/,private,7400,12.0%,1488,59800,pricey,88000,14000,95.2%,0,0,1,0,0,1,0,1,1,1,1,1,1,1,1,1,1,1,16
+139658,Emory University,NULL,Atlanta,Georgia,Southeast,www.emory.edu/,private,7000,15.6%,1480,72900,expensive,72000,17000,90.0%,0,1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,21
+139755,Georgia Institute of Technology-Main Campus,Georgia Tech,Atlanta,Georgia,Southeast,www.gatech.edu/,public,16600,16.0%,1423,29400,affordable,92000,20000,91.9%,1,1,1,0,1,1,0,0,1,1,0,1,1,1,1,0,1,1,16
+144050,University of Chicago,NULL,Chicago,Illinois,Great Lakes,www.uchicago.edu/,private,7600,6.5%,1535,81500,very expensive,91000,13000,95.9%,0,0,1,0,1,1,0,1,1,1,1,1,1,1,1,1,0,1,19
+147767,Northwestern University,NULL,Evanston,Illinois,Great Lakes,www.northwestern.edu/,private,8700,7.0%,1529,81100,very expensive,83000,14000,95.2%,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,23
+152080,University of Notre Dame,Notre Dame | Fighting Irish | ND,Notre Dame,Indiana,Great Lakes,www.nd.edu/,private,9000,15.1%,1490,76900,very expensive,84000,19000,95.9%,1,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,21
+162928,Johns Hopkins University,Johns Hopkins,Baltimore,Maryland,Mid East,www.jhu.edu/,private,5700,7.5%,NULL,65500,pricey,95000,9000,94.6%,0,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,21
+164924,Boston College,NULL,Chestnut Hill,Massachusetts,New England,www.bc.edu/,private,9800,19.0%,1485,78200,very expensive,77000,18000,90.8%,0,1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,20
+166027,Harvard University,NULL,Cambridge,Massachusetts,New England,www.harvard.edu/,private,7900,4.0%,1534,74200,expensive,104000,12000,96.7%,0,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,21
+166683,Massachusetts Institute of Technology,"MIT, M.I.T.",Cambridge,Massachusetts,New England,web.mit.edu/,private,4600,4.1%,NULL,63700,pricey,129000,12000,96.2%,1,1,1,0,1,1,0,1,1,1,1,1,0,1,1,0,1,1,16
+167358,Northeastern University,NULL,Boston,Massachusetts,New England,www.northeastern.edu/,private,15600,18.4%,1500,75700,expensive,81000,22000,90.6%,1,1,1,0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,22
+168148,Tufts University,NULL,Medford,Massachusetts,New England,https://www.tufts.edu/,private,6600,11.4%,1506,79000,very expensive,74000,15000,93.8%,1,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,1,19
+170976,University of Michigan-Ann Arbor,U of Michigan|U of M|Univ of Michigan|U Michigan Ann Arbor|University of Michigan Ann Arbor,Ann Arbor,Michigan,Great Lakes,https://umich.edu/,public,32100,20.2%,NULL,31300,affordable,76000,18000,93.7%,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,24
+171128,Michigan Technological University,Michigan Tech|MTU|Michigan Tech University|Mich Tech|Michigan Technological Univ|Michigan Tech Univ|MT,Houghton,Michigan,Great Lakes,https://www.mtu.edu/,public,5700,85.7%,1256,30600,affordable,77000,20000,69.1%,0,1,1,0,1,0,0,1,1,1,0,1,1,1,1,1,1,1,19
+179867,Washington University in St Louis,WashU,Saint Louis,Missouri,Plains,https://wustl.edu/,private,7700,13.0%,1524,79600,very expensive,86000,15000,93.1%,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,22
+182670,Dartmouth College,"Dartmouth, Big Green",Hanover,New Hampshire,New England,www.dartmouth.edu/,private,4500,6.2%,1508,80200,very expensive,91000,15000,93.6%,0,0,1,0,1,1,0,1,1,1,1,1,1,1,1,0,0,1,16
+185828,New Jersey Institute of Technology,NJIT,Newark,New Jersey,Mid East,https://www.njit.edu/,public,8400,69.1%,1314,29900,affordable,78000,18000,73.7%,1,0,1,0,1,0,1,1,1,1,0,1,0,0,1,0,1,1,17
+186131,Princeton University,NULL,Princeton,New Jersey,Mid East,www.princeton.edu/,private,5200,4.4%,1517,68000,pricey,94000,10000,97.6%,1,0,1,0,1,1,0,1,1,1,1,1,1,1,1,0,0,1,16
+190150,Columbia University in the City of New York,Columbia University,New York,New York,Mid East,www.columbia.edu/,private,8800,4.1%,1528,71000,expensive,97000,19000,97.4%,1,0,1,0,1,1,0,1,1,1,1,1,1,1,1,1,0,1,19
+190415,Cornell University,NULL,Ithaca,New York,Mid East,www.cornell.edu/,private,15500,8.7%,1510,77000,very expensive,91000,13000,94.1%,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,25
+191241,Fordham University,NULL,Bronx,New York,Mid East,www.fordham.edu/,private,9700,58.3%,1402,70300,expensive,70000,20000,83.2%,0,1,1,1,1,1,0,1,1,1,1,1,1,1,1,0,1,1,20
+193900,New York University,NULL,New York,New York,Mid East,https://www.nyu.edu/,private,28600,13.0%,1507,75300,expensive,72000,18000,86.9%,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,24
+194310,Pace University,Pace University,New York,New York,Mid East,www.pace.edu/,private,7800,87.6%,1219,60900,pricey,70000,18000,59.1%,0,1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,22
+194824,Rensselaer Polytechnic Institute,"RPI, Rensselaer",Troy,New York,Mid East,www.rpi.edu/,private,5600,53.0%,1450,75800,expensive,89000,22000,84.2%,1,1,1,0,1,0,1,0,1,1,1,1,1,1,1,1,1,0,17
+195030,University of Rochester,NULL,Rochester,New York,Mid East,https://www.rochester.edu/,private,6400,40.5%,1455,78000,very expensive,75000,19000,85.9%,0,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,21
+198419,Duke University,NULL,Durham,North Carolina,Southeast,www.duke.edu/,private,6800,5.9%,1516,78200,very expensive,93000,12000,95.9%,0,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,1,20
+199847,Wake Forest University,NULL,Winston-Salem,North Carolina,Southeast,www.wfu.edu/,private,5500,25.2%,NULL,77200,very expensive,75000,20000,90.2%,0,1,1,1,1,1,0,1,1,1,1,1,1,1,1,0,1,1,19
+201645,Case Western Reserve University,CWRU|Case|Case Western Reserve,Cleveland,Ohio,Great Lakes,www.case.edu/,private,5700,30.2%,1483,71900,expensive,76000,21000,84.4%,1,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,21
+211440,Carnegie Mellon University,Carnegie Mellon; CMU,Pittsburgh,Pennsylvania,Mid East,www.cmu.edu/,private,6900,13.5%,1520,76900,very expensive,105000,20000,92.8%,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,24
+212054,Drexel University,Drexel,Philadelphia,Pennsylvania,Mid East,https://drexel.edu/,private,14300,82.6%,1317,59300,pricey,78000,20000,78.2%,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,26
+213543,Lehigh University,NULL,Bethlehem,Pennsylvania,Mid East,www.lehigh.edu/,private,5400,46.0%,1422,71500,expensive,89000,20000,87.3%,1,1,1,0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,19
+215062,University of Pennsylvania,"Penn, U of PA, U-Penn, U of P, Pennsylvania, UPenn, Pennsylvania University, University of Pennsylvania, Wharton, Wharton School of Business",Philadelphia,Pennsylvania,Mid East,www.upenn.edu/,private,10600,5.9%,1523,65300,pricey,101000,14000,96.2%,1,1,1,0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,21
+216597,Villanova University,NULL,Villanova,Pennsylvania,Mid East,www.villanova.edu/,private,7000,25.2%,1437,75700,expensive,85000,25000,91.3%,0,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,23
+217156,Brown University,NULL,Providence,Rhode Island,New England,www.brown.edu/,private,7100,5.5%,1517,80400,very expensive,72000,10000,95.8%,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,21
+221999,Vanderbilt University,NULL,Nashville,Tennessee,Southeast,www.vanderbilt.edu/,private,7100,7.1%,1534,76000,very expensive,78000,13000,93.4%,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,20
+228246,Southern Methodist University,SMU,Dallas,Texas,Southwest,https://www.smu.edu/,private,6900,53.1%,1448,76600,very expensive,77000,15000,82.4%,0,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,23
+233921,Virginia Polytechnic Institute and State University,Virginia Tech,Blacksburg,Virginia,Southeast,www.vt.edu/,public,29700,56.5%,1320,27800,affordable,70000,19000,86.6%,1,1,1,0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,21
+234076,University of Virginia-Main Campus,University of Virginia  UVa  UVA,Charlottesville,Virginia,Southeast,https://www.virginia.edu/,public,17000,20.7%,1457,32300,affordable,75000,15000,93.7%,1,0,1,0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,22
+243744,Stanford University,NULL,Stanford,California,Far West,www.stanford.edu/,private,7600,3.9%,1528,70900,expensive,110000,10000,95.5%,0,1,1,0,1,1,0,1,1,1,1,1,1,1,1,0,0,1,17

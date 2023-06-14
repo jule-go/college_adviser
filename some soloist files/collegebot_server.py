@@ -2,10 +2,10 @@ from flask import Flask, request, Response, jsonify
 from flask import render_template
 from flask_cors import CORS
 import flask
-import json
+import json, re
 from collections import defaultdict
 import random
-from db_interface import query_from_db, get_info
+from db_interface import query_from_db
 
 
 import os
@@ -111,27 +111,32 @@ def generate_for_queue(in_queue, out_queue):
             memory.append(' ; '.join(t))
         print(memory)
         
-        template, action = response.split("system :")
-
         followup = ''
-        if response == 'action_query_knowledge_base':
-            num_options, candidates = query_from_db(memory)
-            next_ask = "state"
-            followup = f"Here's what I found: There are {num_options} colleges that fit your query, like {candidates[0]}."
-            # later change to: get delex response (presumably gets predicted somewhere in here?) -> insert db response -> followup
-            # update memory?
-        if response == 'action_show_more':
-            num_options, candidates = query_from_db(memory)
-            followup = f"Here's some colleges you might be interested in: {candidates[:10]}"
-        if response == 'action_tell_me_about':
-            info = get_info(memory)
-            followup = f"{info['name']} is a {info['control']} college in {info['city']}, {info['state']}. "
+        
+        rows = query_from_db(beliefstate=belief_states)
+
+        followup = fill_delex(response, rows)
+
         res = {}
         res['response'] = response
         res['memory'] = memory
         res['followup'] = followup
         out_queue.put(res)
         in_queue.task_done()
+
+def fill_delex(pattern:str, rows: list):
+    fill_dict = {key: value for key, value in rows[0].items()}
+    #slot_dict
+    slots_to_fill = re.findall(r"\[(\S+)\]", pattern)
+    if "name1" in pattern:
+        fill_dict["name1"] = rows[0]["name"]
+        fill_dict["name2"] = rows[1]["name"]
+    if "area" in pattern:
+        pass # might not need that
+    # TODO maybe sometimes alias
+    for delex in slots_to_fill:
+        pattern.replace("["+ delex + "]", fill_dict[delex])
+
 
 if __name__ == "__main__":
 
