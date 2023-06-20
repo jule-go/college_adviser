@@ -1,0 +1,249 @@
+[{
+    "history": [
+      "user : Hello!"
+    ],
+    "belief": "belief : None",
+    "kb": "",
+    "reply": "Hi! Tell me what kind of college you're looking for."
+  },
+  {
+    "history": [
+      "user : Hello!",
+      "system : Hi! Tell me what kind of college you're looking for.",
+      "user : I'm looking for a public college in the southwest"
+    ],
+    "belief": "belief : region = southwest",
+    "kb": "Database 2 results",
+    "reply": "What would you like to study there?"
+  },
+  {
+    "history": [
+      "user : Hello!",
+      "system : Hi! Tell me what kind of college you're looking for.",
+      "user : I'm looking for a public college in the southwest",
+      "system : What would you like to study there?",
+      "user : I'd like to study journalism"
+    ],
+    "belief": "belief : region = southeast ; area = journalism",
+    "kb": "Database 2 results",
+    "reply": "I found two universities that could be of interest to you, [name1] and [name2]. Would you like to know more about one of them?"
+  },
+  {
+    "history": [
+      "user : Hello!",
+      "system : Hi! Tell me what kind of college you're looking for.",
+      "user : I'm looking for a public college in the southwest",
+      "system : What would you like to study there?",
+      "user : I'd like to study journalism",
+      "system : I found two universities that could be of interest to you, Grand Canyon University and Southern Methodist University. Would you like to know more about one of them?",
+      "user : Yeah, tell me more about Grand Canyon University"
+    ],
+    "belief": "belief : region = southeast ; area = journalism ; name = Grand Canyon University",
+    "kb": "Database 1 result",
+    "reply": "[name] is a [control] top university in [city], [state] with [students] undergraduate students. You can check out their website at [url]."
+  },
+  {
+    "history": [
+      "user : Hello!",
+      "system : Hi! Tell me what kind of college you're looking for.",
+      "user : I'm looking for a public college in the southwest",
+      "system : What would you like to study there?",
+      "user : I'd like to study journalism",
+      "system : I found two universities that could be of interest to you, Grand Canyon University and Southern Methodist University. Would you like to know more about one of them?",
+      "user : Yeah, tell me more about Grand Canyon University",
+      "system : Grand Canyon University is a private for profit top university in Phoenix, Arizone with 64210 undergraduate students. You can check out their website at www.gcu.edu/.",
+      "user : Is it expensive to study there?"
+    ],
+    "belief": "belief : region = southeast ; area = journalism ; name = Grand Canyon University", 
+    "kb": "Database 1 result",
+    "reply": "Median total costs are [cost] per year."
+  },
+  {
+    "history": [
+      "user : Hello!",
+      "system : Hi! Tell me what kind of college you're looking for.",
+      "user : I'm looking for a public college in the southwest",
+      "system : What would you like to study there?",
+      "user : I'd like to study journalism",
+      "system : I found two universities that could be of interest to you, Grand Canyon University and Southern Methodist University. Would you like to know more about one of them?",
+      "user : Yeah, tell me more about Grand Canyon University",
+      "system : Grand Canyon University is a private for profit top university in Phoenix, Arizone with 64210 undergraduate students. You can check out their website at www.gcu.edu/.",
+      "user : Is it expensive to study there?",
+      "system: Median total costs are 31393 per year.",
+      "user : Will I go into a lot of debt studying there?"
+    ],
+    "belief": "belief : region = southeast ; area = journalism ; name = Grand Canyon University", 
+    "kb": "Database 1 result",
+    "reply": "On average, students graduate there with [debt] dollars in debt."
+  },
+  {
+    "history": [
+      "user : Hello!",
+      "system : Hi! Tell me what kind of college you're looking for.",
+      "user : I'm looking for a public college in the southwest",
+      "system : What would you like to study there?",
+      "user : I'd like to study journalism",
+      "system : I found two universities that could be of interest to you, Grand Canyon University and Southern Methodist University. Would you like to know more about one of them?",
+      "user : Yeah, tell me more about Grand Canyon University",
+      "system : Grand Canyon University is a private for profit top university in Phoenix, Arizone with 64210 undergraduate students. You can check out their website at www.gcu.edu/.",
+      "user : Is it expensive to study there?",
+      "system: Median total costs are 31393 per year.",
+      "user : Will I go into a lot of debt studying there?",
+      "system : On average, students graduate there with 12500 dollars in debt.",
+      "user : Thank you, goodbye!"
+    ],
+    "belief": "belief : region = southeast ; area = journalism ; name = Grand Canyon University", 
+    "kb": "Database 1 result",
+    "reply": "Goodbye!"
+  },
+  {
+    "history": [
+      "user : Hello",
+      "system : Hi how can I help you",
+      "user : I'm interested in colleges in California"
+    ],
+    "belief": "belief : state = California",
+    "kb": "Database 7 results",
+    "reply": "How expensive would you like it to be?"
+  },
+  {
+    "history": [
+      "user : Hello",
+      "system : Hi how can I help you",
+      "user : I'm interested in colleges in Pennsylvania"
+    ],
+    "belief": "belief : state = Pennsylvania",
+    "kb": "Database 5 results",
+    "reply": "Do you have any other wishes to limit the amount of colleges?"
+  },
+  {
+    "history": [
+      "user : Hi",
+      "system : Hello! I'm the college adviser, how can I help you?",
+      "user : I want to find a college in Los Angeles"
+    ],
+    "belief": "belief : city = Los Angeles",
+    "kb": "Database 1 result",
+    "reply": "I found a college that could interest you: [name] is in [city]. Do you want to know more about it?"
+  },
+  {
+    "history": [
+      "user : Hi",
+      "system : Hello! I'm the college adviser, how can I help you?",
+      "user : I want to find a college in Los Angeles",
+      "system : I found a college that could interest you: University of Southern California is in Los Angeles. Do you want to know more about it?",
+      "user : No, thank you."
+    ],
+    "belief": "belief : city = Los Angeles",
+    "kb": "",
+    "reply": "I'm glad I could help you. Bye!"
+  },
+  {
+    "history": [
+      "user : Hi",
+      "system : Hello! I'm the college adviser, how can I help you?",
+      "user : I want to find a college in Los Angeles",
+      "system : I found a college that could interest you: University of Southern California is in Los Angeles. Do you want to know more about it?",
+      "user : How expensive is it to study there?"
+    ],
+    "belief": "belief : city = Los Angeles",
+    "kb": "Database 1 result",
+    "reply": "Studying at [name] is [price_range]"
+  },
+  {
+    "history": [
+      "user : Hi",
+      "system : Hello! How can I help you?",
+      "user : Can you give me information on the Princeton University?"
+    ],
+    "belief": "belief : name = Princeton University",
+    "kb": "Database 1 result",
+    "reply": "The Princeton University is located in [state]. It's admission rate is [admission rate]"
+  },
+  {
+    "history": [
+      "user : Can you help me to find a college where I can study engineering?"
+    ],
+    "belief": "belief : area = engineering",
+    "kb": "Database 45 results",
+    "reply": "Do you have any other requirements for the college?"
+  },
+  {
+    "history": [
+      "user : Is there a college in Cambridge?",
+      "system : I have two colleges listed in Cambridge. On which do you want more information?",
+      "user : I don't care, just list one example."
+    ],
+    "belief": "belief : city = Cambridge",
+    "kb": "Database 2 results",
+    "reply": "For example [name] is located in [city]. The completion rate is [completion], but it is [price_range]."
+  },
+  {
+    "history": [
+      "user : I heard the Stanford-college is great. Can you tell me more?",
+      "system : I haven't heard of this college yet. Did you name the college correct?",
+      "user : There might be a mistake in the name. But I know that it's is something with Stanford.",
+      "system : The Stanford University is in Stanford. Was this the college you were looking for?",
+      "user: Yes, thank you."
+    ],
+    "belief": "belief : city = Stanford",
+    "kb": "Database 1 result",
+    "reply": "Do you want to know more about the [name]?"
+  },
+  {
+    "history": [
+      "user : Is it correct that the Lehigh University is expensive?"
+    ],
+    "belief": "belief : name = Lehigh University ; price_range = expensive",
+    "kb": "Database 1 result",
+    "reply": "That's correct, [name] is [price_range]."
+  },
+  {
+    "history": [
+      "user : Is there a study program related to health offerend?"
+    ],
+    "belief": "belief : area = health",
+    "kb": "Database 38 results",
+    "reply": "There's many. Is there anything else you want from the college?"
+  },
+  {
+    "history": [
+      "user : I'm interested in the Duke University",
+      "system : Do you want any information on the Duke University?",
+      "user : Yes, tell me all you know about it.",
+      "system : The Duke University is in Durham, North Carolina. It belongs to region 8. About 6815 students go there. The admission rate is 0.058. The SAT is 1516. With an average cost of 78176 it's very expensive. In 95.87% students complete their studies.",
+      "user : Is there more to know?"
+    ],
+    "belief": "belief : name = Duke university",
+    "kb": "Database 1 result",
+    "reply": "In case you want more information: Visit [url]."
+  },
+  {
+    "history": [
+      "user : I'm interested in the Duke University",
+      "system : Do you want any information on the Duke University?",
+      "user : Yes, tell me all you know about it."
+    ],
+    "belief": "belief : name = Duke university",
+    "kb": "Database 1 result",
+    "reply": "The [name] is in [city], [state]. It belongs to region [region]. About [students] students go there. The admission rate is [admission_rate]. The SAT is [sat]. With an average cost of [cost] it's [price_range]. In [completion]% students complete their studies."
+  },
+  {
+    "history": [
+      "user : What is the MIT?"
+    ],
+    "belief": "belief : alias = MIT",
+    "kb": "Database 1 result",
+    "reply": "The [name] is in [city]. It is often called [alias]."
+  },
+  {
+    "history": [
+      "user : Is there a college close to where I live?",
+      "system : Where do you live?",
+      "user : In Phoenix"
+    ],
+    "belief": "belief : city = Phoenix",
+    "kb": "Database 1 result",
+    "reply": "[name] is a college in [city]"
+  }
+]
