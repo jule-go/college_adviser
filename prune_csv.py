@@ -127,7 +127,7 @@ Refines a pruned csv table of colleges with final columns done:
 - writes out states, regions, and control ("public"/"private")
 """
 def get_v3():
-    out_file = open("pruned_dataset_final_v3.csv", "w")
+    out_file = open("pruned_dataset_final_v4.csv", "w")
     with open("pruned_dataset_final_v2.csv", "r") as f:
         reader = csv.reader(f, delimiter=",")
         writer = csv.writer(out_file, delimiter=',', quotechar='"', lineterminator="\n")
@@ -137,13 +137,16 @@ def get_v3():
         writer.writerow(header)
         for row in reader:
             row[ix["CONTROL"]] = "private" if int(row[ix["CONTROL"]]) > 1 else "public"
-            row[ix["REGION"]] = region_dict[row[ix["REGION"]]]
-            row[ix["STATE"]] = state_dict[row[ix["STATE"]]]
-            
+            row[ix["REGION"]] = region_dict[row[ix["REGION"]]].lower()
+            row[ix["STATE"]] = state_dict[row[ix["STATE"]]].lower()
+            row[ix["ALIAS"]] = row[ix["ALIAS"]].lower()
+            row[ix["NAME"]] = row[ix["NAME"]].lower()
+            row[ix["CITY"]] = row[ix["CITY"]].lower()
+
             row[ix["NUM_UGDS"]] = str(round(int(row[ix["NUM_UGDS"]]), -2))
             row[ix["ADM_RATE"]] = str(round(100 * float(row[ix["ADM_RATE"]]), 1)) + '%'
 
-            compl_rate = float(row[ix["COMPL_RATE"]])  #some are not percentages, but #/1000 oder so
+            compl_rate = float(row[ix["COMPL_RATE"]])  #some are not percentages, but #/1000 oder sth
             if compl_rate > 1: compl_rate /= 1000
             row[ix["COMPL_RATE"]] = str(round(100 *compl_rate, 1)) + '%' 
 
