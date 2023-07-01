@@ -6,22 +6,27 @@ column_dict = {"id": "UNITID", "name": "NAME", "alias": "ALIAS", "city": "CITY",
 "architecture": "CIP04BACHL", "journalism": "CIP09BACHL", "computer science": "CIP11BACHL", "education": "CIP13BACHL", "engineering": "CIP14BACHL", "linguistics": "CIP16BACHL", "law": "CIP22BACHL", 
 "literature": "CIP23BACHL", "biology": "CIP26BACHL", "mathematics": "CIP27BACHL", "philosophy": "CIP38BACHL", "physics": "CIP40BACHL", "psychology": "CIP42BACHL", "social science": "CIP45BACHL", 	
 "arts": "CIP50BACHL", "health": "CIP51BACHL", "business": "CIP52BACHL", "history": "CIP54BACHL", "areas": "SUM"}
+#column_to_name = {value: key for key, value in column_dict.items}
 slots = list(column_dict.keys())
 
 # BS looks like
 #"belief": "belief : cuisine = German ; object_type = restaurant"
 
 def query_from_db(beliefstate: str):
-    with closing(sqlite3.connect("/mount/studenten-temp1/users/zabereus/adviser/soloist_env/soloist/examples/college_bot/pruned_v2.db")) as connection:
+    with closing(sqlite3.connect("/mount/studenten-temp1/users/zabereus/adviser/soloist_env/soloist/examples/college_bot/pruned_v4.db")) as connection:
         cursor = connection.cursor()
 
-        query = "SELECT * FROM pruned_v2 WHERE "
+        query = "SELECT * FROM pruned_v4 WHERE "
         query_conditions = []
-        for condition in beliefstate.split(":")[1].split(";"):
+        beliefstate = beliefstate.lower()
+        for condition in beliefstate.split(";"):#.split(":")[1]
             condition = condition.strip()
             key, sign, value = re.fullmatch(f"(\S+) ([<>=]) (.+)", condition).group(1,2,3)
-            print(key, sign, value)
-            #condition.split(" ")
+            #print(key, sign, value)
+            if key not in column_dict and key not in ["area"]:
+                print(f"{key} is not a valid slot")
+                continue
+
             assert sign in "<>="
             # converting "area = architecture" to "architecture = 1"
             if key == "area":
@@ -30,18 +35,23 @@ def query_from_db(beliefstate: str):
             # allowing for aliases
             if key == "name":
                 query_conditions.append(f"(NAME LIKE '%{value}%' OR ALIAS LIKE '%{value}%')")
+            elif key == "state" or key == "region":
+                query_conditions.append(f"(STATE = '{value}' OR REGION = '{value}')")
             else:
                 query_conditions.append("{}{}'{}'".format(column_dict[key], sign, value))
         query += " AND ".join(query_conditions)
         print(query)
         rows = cursor.execute(query).fetchall()
+
+        # convert db rows to dicts
         row_dicts = []
         for row in rows:
             row_dict = {}
             for i, value in enumerate(row):
                 row_dict[slots[i]] = value
             row_dicts.append(row_dict)
-        print(row_dicts)
+        print(len(row_dicts))
+        #print(row_dicts)
         options = len(rows)
         return options, row_dicts
 
@@ -59,4 +69,4 @@ def request_from_db(beliefstate: dict):
         db_state = []
         return db_state
 
-query_from_db("belief : state = CA ; debt < 13000; area = engineering")
+#query_from_db("belief : region = CA ; debt < 13000; area = engineering")

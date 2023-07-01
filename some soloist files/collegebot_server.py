@@ -36,7 +36,7 @@ def parse(sampled_results):
         system_response = system_response.strip()
         system_response = system_response.split('system :')[0]
         system_response = ' '.join(system_response.split()[:])
-        svs = system_response.split(' ; ')
+        svs = system_response.replace(",", ";").split(';')
         bs_state = {}
         for sv in svs:
             if '=' in sv:
@@ -49,8 +49,8 @@ def parse(sampled_results):
     candidates_w_idx = [(idx, v) for idx,v in enumerate(candidates)]
     candidates = sorted(candidates_w_idx, key=functools.cmp_to_key(compare))
 
-    print(candidates)
-    print("bs: ", candidates_bs)
+    #print(candidates)
+    #print("bs: ", candidates_bs)
 
     idx, response = candidates[-1]
     states = candidates_bs[idx]
@@ -66,7 +66,7 @@ def compare(key1, key2):
     else:
         return -1  
 
-def predictor(context):
+def predictor(context, bs=None, db_state=None):
     context_formated = []
     for idx, i in enumerate(context):
         if idx % 2 == 0:
@@ -74,7 +74,11 @@ def predictor(context):
         else:
             context_formated.append(f'system : {i}')
             
-    sampled_results = sample(context_formated[-1:])
+    if bs:
+        sampled_results = sample2(context_formated, bs, db_state)
+    else:
+        sampled_results = sample(context_formated) #TODO oh that was bad, was [-1:]
+    print("sampled results", sampled_results)
     belief_states, response = parse(sampled_results)
     print(f"response {response}, bs {belief_states}")
     return response, belief_states
@@ -99,23 +103,24 @@ def generate_for_queue(in_queue, out_queue):
     while True:
         _, in_request = in_queue.get()
         obs = in_request['msg']
-        response, belief_states = predictor(obs)    
-        # try:
-        #     response = predictor(obs)    
-        # except Exception:
-        #     response = 'Sorry I dont understand, can you paraphrase again ?'
+        print("now predicting...")
+        response, belief_states = predictor(obs)    #We only use BS from here: change to _, belief_states
+ 
         if belief_states != {}:
             t = []
             for s,v in belief_states.items():
                 t.append(f'{s} = {v}')
             memory.append(' ; '.join(t))
-        print(memory)
+        print("memory", memory)
+
+        options, rows = query_from_db(beliefstate=memory[-1])
+
+        db_state = f"database {options} results "
+        #response, _ = predictor(obs, memory[-1] + "<EOB> ", db_state)
         
-        followup = ''
-        
-        rows = query_from_db(beliefstate=belief_states)
 
         followup = fill_delex(response, rows)
+        print(followup)
 
         res = {}
         res['response'] = response
@@ -125,7 +130,12 @@ def generate_for_queue(in_queue, out_queue):
         in_queue.task_done()
 
 def fill_delex(pattern:str, rows: list):
-    fill_dict = {key: value for key, value in rows[0].items()}
+
+    # if no results, but pattern has delex slot, append fail message
+    if len(rows) == 0:
+        return pattern + "nores" * int("[" in pattern)
+
+    fill_dict = rows[0] # {key: value for key, value in rows[0].items()} what was i smoking there
     #slot_dict
     slots_to_fill = re.findall(r"\[(\S+)\]", pattern)
     if "name1" in pattern:
@@ -135,21 +145,32 @@ def fill_delex(pattern:str, rows: list):
         pass # might not need that
     # TODO maybe sometimes alias
     for delex in slots_to_fill:
-        pattern.replace("["+ delex + "]", fill_dict[delex])
+        try:
+            pattern = pattern.replace("["+ delex + "]", str(fill_dict[delex]))
+        except KeyError:
+            print(f"slot {delex} couldn't be filled")
+    return pattern
 
 
 if __name__ == "__main__":
 
     from soloist.server import *
-    args.model_name_or_path = '/mount/studenten-temp1/users/zabereus/adviser/soloist_env/soloist/examples/knowledgebasebot/knowledgebase_model'
+    args.model_name_or_path = '/mount/studenten-temp1/users/zabereus/adviser/soloist_env/soloist/examples/college_bot/college_model'
     main()
 
-    # rgi_queue.put((2, {'msg': "What is with I due forni"}))
-    # print(generate_for_queue(rgi_queue, rgo_queue))
-    # print("q", rgo_queue)
+    # predictor(["What is the admission rate at Harvard"])
+    # print("-------------------")
+    # predictor(["I'm looking for expensive colleges in New England", "What would you like to study there?", "physics"])    
+    # print("-------------------")
+    # predictor(["show me affordable colleges", "Where would you like to study?", "Texas"])
+
 
     worker = Thread(target=generate_for_queue, args=(rgi_queue, rgo_queue,))
     worker.setDaemon(True)
     worker.start()
+
+    rgi_queue.put((2, {'msg': ["how expensive is it to study there?"]}))
+    print("-------------------")
+    #rgi_queue.put((2, {'msg': ["What is the admission rate at Harvard"]}))
 
     app.run(host='0.0.0.0',port=8081)
