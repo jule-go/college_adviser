@@ -206,3 +206,8 @@ adviser/tools/*.zip
 
 # models
 adviser/resources/models
+
+# soloist example data
+soloist/examples/knowledgebasebot
+soloist/example/multiwoz
+soloist/example/reminderbot
