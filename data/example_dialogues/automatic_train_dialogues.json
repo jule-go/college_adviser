@@ -1,0 +1,1618 @@
+[
+    {
+        "history": [
+            "user : i want to study in cambridge."
+        ],
+        "belief": "city = cambridge",
+        "kb": "database 2 results",
+        "reply": "system : both, [name1] and [name2] match your preferences."
+    },
+    {
+        "history": [
+            "user : i want to study in cambridge.",
+            "system : both, [name1] and [name2] match your preferences.",
+            "user : can you study engineering there?"
+        ],
+        "belief": "city = cambridge ; area = engineering",
+        "kb": "database 0 results",
+        "reply": "system : i'm sorry, i don't have any information on this."
+    },
+    {
+        "history": [
+            "user : i want it to be private."
+        ],
+        "belief": "control = private",
+        "kb": "database 41 results",
+        "reply": "system : there's multiple colleges that match your criteria. would you like to narrow down your search?"
+    },
+    {
+        "history": [
+            "user : i want it to be private.",
+            "system : there's multiple colleges that match your criteria. would you like to narrow down your search?",
+            "user : is there a study program related to arts offered?"
+        ],
+        "belief": "control = private ; area = arts",
+        "kb": "database 41 results",
+        "reply": "system : there's multiple colleges that match your criteria. would you like to narrow down your search?"
+    },
+    {
+        "history": [
+            "user : can you help me to find a college where i can study architecture?"
+        ],
+        "belief": "area = architecture",
+        "kb": "database 28 results",
+        "reply": "system : there's many. is there anything else you want from the college?"
+    },
+    {
+        "history": [
+            "user : i want to do something with education."
+        ],
+        "belief": "area = education",
+        "kb": "database 22 results",
+        "reply": "system : alright. there is a lot of colleges left. what specifically are you looking for?"
+    },
+    {
+        "history": [
+            "user : i want to do something with education.",
+            "system : alright. there is a lot of colleges left. what specifically are you looking for?",
+            "user : i want to study history."
+        ],
+        "belief": "area = education ; area = history",
+        "kb": "database 21 results",
+        "reply": "system : do you have anything else in mind?"
+    },
+    {
+        "history": [
+            "user : is there a college that offers courses in engineering?"
+        ],
+        "belief": "area = engineering",
+        "kb": "database 45 results",
+        "reply": "system : do you want to limit the search for a college further?"
+    },
+    {
+        "history": [
+            "user : is there a college that offers courses in engineering?",
+            "system : do you want to limit the search for a college further?",
+            "user : Alright, bye!"
+        ],
+        "belief": "area = engineering",
+        "kb": "database 45 results",
+        "reply": "system : Goodbye"
+    },
+    {
+        "history": [
+            "user : in new haven."
+        ],
+        "belief": "city = new haven",
+        "kb": "database 1 result",
+        "reply": "system : i found a college that could interest you: [name]. do you want to know more about it?"
+    },
+    {
+        "history": [
+            "user : in new haven.",
+            "system : i found a college that could interest you: [name]. do you want to know more about it?",
+            "user : Okay, thanks. Goodbye!"
+        ],
+        "belief": "city = new haven",
+        "kb": "database 1 result",
+        "reply": "system : Goodbye!"
+    },
+    {
+        "history": [
+            "user : can you study social sciences there?"
+        ],
+        "belief": "area = social sciences",
+        "kb": "database 1 result",
+        "reply": "system : on average, students accepted into [name] have an sat score of [sat].the [name] could interest you. would you like to know more about it?"
+    },
+    {
+        "history": [
+            "user : is there a study program related to architecture offered?"
+        ],
+        "belief": "area = architecture",
+        "kb": "database 21 results",
+        "reply": "system : would you like to narrow your search?"
+    },
+    {
+        "history": [
+            "user : i want to do something with literature."
+        ],
+        "belief": "area = literature",
+        "kb": "database 47 results",
+        "reply": "system : there's many. is there anything else you want from the college?"
+    },
+    {
+        "history": [
+            "user : i'd like to study computer science"
+        ],
+        "belief": "area = computer science",
+        "kb": "database 49 results",
+        "reply": "system : would you like to narrow your search?"
+    },
+    {
+        "history": [
+            "user : is there a study program related to physics offered?"
+        ],
+        "belief": "area = physics",
+        "kb": "database 49 results",
+        "reply": "system : do you have any other wishes to limit the amount of colleges?"
+    },
+    {
+        "history": [
+            "user : is there a study program related to physics offered?",
+            "system : do you have any other wishes to limit the amount of colleges?",
+            "user : the college should be public."
+        ],
+        "belief": "area = physics ; control = public",
+        "kb": "database 8 results",
+        "reply": "system : do you have any other requirements for the college?"
+    },
+    {
+        "history": [
+            "user : can you help me to find a college where i can study literature?"
+        ],
+        "belief": "area = literature",
+        "kb": "database 2 results",
+        "reply": "system : both, [name1] and [name2] match your preferences."
+    },
+    {
+        "history": [
+            "user : i'd like to study biology"
+        ],
+        "belief": "area = biology",
+        "kb": "database 49 results",
+        "reply": "system : alright. there is a lot of colleges left. what specifically are you looking for?"
+    },
+    {
+        "history": [
+            "user : i'd like to study biology",
+            "system : alright. there is a lot of colleges left. what specifically are you looking for?",
+            "user : Okay, thanks. Goodbye!"
+        ],
+        "belief": "area = biology",
+        "kb": "database 49 results",
+        "reply": "system : Goodbye"
+    },
+    {
+        "history": [
+            "user : i heard michigan tech|mtu|michigan tech university|mich tech|michigan technological univ|michigan tech univ|mt is great. can you tell me more about it?"
+        ],
+        "belief": "alias = michigan tech|mtu|michigan tech university|mich tech|michigan technological univ|michigan tech univ|mt",
+        "kb": "database 1 result",
+        "reply": "system : may i offer [name]?"
+    },
+    {
+        "history": [
+            "user : is there a college that offers courses in journalism?"
+        ],
+        "belief": "area = journalism",
+        "kb": "database 13 results",
+        "reply": "system : do you have any other requirements for the college?"
+    },
+    {
+        "history": [
+            "user : i want to study psychology."
+        ],
+        "belief": "area = psychology",
+        "kb": "database 3 results",
+        "reply": "system : do you have other criteria for the college?"
+    },
+    {
+        "history": [
+            "user : i want to study psychology.",
+            "system : do you have other criteria for the college?",
+            "user : is there a college that offers courses in law?"
+        ],
+        "belief": "area = psychology ; area = law",
+        "kb": "database 2 results",
+        "reply": "system : there's two colleges that match your preferences: [name1] and [name2]. do you want to know more about one of them?"
+    },
+    {
+        "history": [
+            "user : is there a college that offers courses in social sciences?"
+        ],
+        "belief": "area = social sciences",
+        "kb": "database 48 results",
+        "reply": "system : would you like to narrow your search?"
+    },
+    {
+        "history": [
+            "user : is there a college that offers courses in social sciences?",
+            "system : would you like to narrow your search?",
+            "user : is there a college that offers courses in linguistics?"
+        ],
+        "belief": "area = social sciences ; area = linguistics",
+        "kb": "database 2 results",
+        "reply": "system : i found two universities that could be of interest to you, [name1] and [name2]. would you like to know more about one of them?"
+    },
+    {
+        "history": [
+            "user : how about yale university?"
+        ],
+        "belief": "name = yale university",
+        "kb": "database 1 result",
+        "reply": "system : on average it costs [cost] dollars per year."
+    },
+    {
+        "history": [
+            "user : What's up?"
+        ],
+        "belief": "none",
+        "kb": "Database 0 results",
+        "reply": "system : Greetings, how may I help you?"
+    },
+    {
+        "history": [
+            "user : What's up?",
+            "system : Greetings, how may I help you?",
+            "user : i want to study education."
+        ],
+        "belief": "area = education",
+        "kb": "database 27 results",
+        "reply": "system : do you have other criteria for the college?"
+    },
+    {
+        "history": [
+            "user : i want to study philosophy."
+        ],
+        "belief": "area = philosophy",
+        "kb": "database 4 results",
+        "reply": "system : do you have any other requirements for the college?"
+    },
+    {
+        "history": [
+            "user : i want to study psychology."
+        ],
+        "belief": "area = psychology",
+        "kb": "database 46 results",
+        "reply": "system : do you want to limit the search for a college further?"
+    },
+    {
+        "history": [
+            "user : i want to study psychology.",
+            "system : do you want to limit the search for a college further?",
+            "user : i want to find a college in chestnut hill."
+        ],
+        "belief": "area = psychology ; city = chestnut hill",
+        "kb": "database 1 result",
+        "reply": "system : i found a college that could interest you: [name]. do you want to know more about it?"
+    },
+    {
+        "history": [
+            "user : i want to do something with philosophy."
+        ],
+        "belief": "area = philosophy",
+        "kb": "database 45 results",
+        "reply": "system : alright. there is a lot of colleges left. what specifically are you looking for?"
+    },
+    {
+        "history": [
+            "user : i want to do something with philosophy.",
+            "system : alright. there is a lot of colleges left. what specifically are you looking for?",
+            "user : is there a college in medford?"
+        ],
+        "belief": "area = philosophy ; city = medford",
+        "kb": "database 1 result",
+        "reply": "system : the [name] offers studying [area],in case you want more information: visit [url]."
+    },
+    {
+        "history": [
+            "user : Hi"
+        ],
+        "belief": "none",
+        "kb": "Database 0 results",
+        "reply": "system : Greetings, how may I help you?"
+    },
+    {
+        "history": [
+            "user : Hi",
+            "system : Greetings, how may I help you?",
+            "user : can you study mathematics there?"
+        ],
+        "belief": "area = mathematics",
+        "kb": "database 48 results",
+        "reply": "system : do you have anything else in mind?"
+    },
+    {
+        "history": [
+            "user : Hi",
+            "system : Greetings, how may I help you?",
+            "user : can you study mathematics there?",
+            "system : do you have anything else in mind?",
+            "user : is there a college that offers courses in health?"
+        ],
+        "belief": "area = mathematics ; area = health",
+        "kb": "database 11 results",
+        "reply": "system : would you like to narrow your search?"
+    },
+    {
+        "history": [
+            "user : Hi",
+            "system : Greetings, how may I help you?",
+            "user : can you study mathematics there?",
+            "system : do you have anything else in mind?",
+            "user : is there a college that offers courses in health?",
+            "system : would you like to narrow your search?",
+            "user : Alright, bye!"
+        ],
+        "belief": "area = mathematics ; area = health",
+        "kb": "database 11 results",
+        "reply": "system : Your're welcome. Goodbye!"
+    },
+    {
+        "history": [
+            "user : i want to find a college in los angeles."
+        ],
+        "belief": "city = los angeles",
+        "kb": "database 1 result",
+        "reply": "system : your expected earnings will be around [earnings] dollars anually."
+    },
+    {
+        "history": [
+            "user : i want to find a college in los angeles.",
+            "system : your expected earnings will be around [earnings] dollars anually.",
+            "user : can you help me to find a college where i can study journalism?"
+        ],
+        "belief": "city = los angeles ; area = journalism",
+        "kb": "database 1 result",
+        "reply": "system : your expected earnings will be around [earnings] dollars anually."
+    },
+    {
+        "history": [
+            "user : is there a study program related to linguistics offered?"
+        ],
+        "belief": "area = linguistics",
+        "kb": "database 46 results",
+        "reply": "system : do you have other criteria for the college?"
+    },
+    {
+        "history": [
+            "user : i'm looking for a college in houghton."
+        ],
+        "belief": "city = houghton",
+        "kb": "database 1 result",
+        "reply": "system : for more information check its website at [url]."
+    },
+    {
+        "history": [
+            "user : Hello"
+        ],
+        "belief": "none",
+        "kb": "Database 0 results",
+        "reply": "system : Hi, I'm the college adviser, how can I help you?"
+    },
+    {
+        "history": [
+            "user : Hello",
+            "system : Hi, I'm the college adviser, how can I help you?",
+            "user : is there a college that offers courses in law?"
+        ],
+        "belief": "area = law",
+        "kb": "database 7 results",
+        "reply": "system : do you have other criteria for the college?"
+    },
+    {
+        "history": [
+            "user : is there a study program related to business offered?"
+        ],
+        "belief": "area = business",
+        "kb": "database 40 results",
+        "reply": "system : would you like to narrow your search?"
+    },
+    {
+        "history": [
+            "user : is there a study program related to business offered?",
+            "system : would you like to narrow your search?",
+            "user : i heard georgia tech is great. can you tell me more about it?"
+        ],
+        "belief": "area = business ; alias = georgia tech",
+        "kb": "database 1 result",
+        "reply": "system : [name] is a college in [city] and thus belongs to [region]."
+    },
+    {
+        "history": [
+            "user : i want to study business."
+        ],
+        "belief": "area = business",
+        "kb": "database 9 results",
+        "reply": "system : do you have other criteria for the college?"
+    },
+    {
+        "history": [
+            "user : i want to study health."
+        ],
+        "belief": "area = health",
+        "kb": "database 38 results",
+        "reply": "system : do you have other criteria for the college?"
+    },
+    {
+        "history": [
+            "user : i want to study health.",
+            "system : do you have other criteria for the college?",
+            "user : do you know any unis in mid east?"
+        ],
+        "belief": "area = health ; region = mid east",
+        "kb": "database 14 results",
+        "reply": "system : do you have anything else in mind?"
+    },
+    {
+        "history": [
+            "user : i want to study health.",
+            "system : do you have other criteria for the college?",
+            "user : do you know any unis in mid east?",
+            "system : do you have anything else in mind?",
+            "user : Thank you for the information."
+        ],
+        "belief": "area = health ; region = mid east",
+        "kb": "database 14 results",
+        "reply": "system : See you soon."
+    },
+    {
+        "history": [
+            "user : i want to go to a college in [city]."
+        ],
+        "belief": "state = tennessee",
+        "kb": "database 1 result",
+        "reply": "system : [name] is a college in [city] and thus belongs to [region]."
+    },
+    {
+        "history": [
+            "user : i want to go to a college in [city].",
+            "system : [name] is a college in [city] and thus belongs to [region].",
+            "user : i heard new jersey institute of technology is great. can you tell me more about it?"
+        ],
+        "belief": "state = tennessee ; name = new jersey institute of technology",
+        "kb": "database 0 results",
+        "reply": "system : i didn't find a result. is there anything else i can help you with?"
+    },
+    {
+        "history": [
+            "user : i heard university of notre dame is great. can you tell me more about it?"
+        ],
+        "belief": "name = university of notre dame",
+        "kb": "database 1 result",
+        "reply": "system : for more information check its website at [url]."
+    },
+    {
+        "history": [
+            "user : tell me more about the villanova university."
+        ],
+        "belief": "name = villanova university",
+        "kb": "database 1 result",
+        "reply": "system : okay, how about [name]? it's a great university in [city], [state]."
+    },
+    {
+        "history": [
+            "user : tell me more about the villanova university.",
+            "system : okay, how about [name]? it's a great university in [city], [state].",
+            "user : do you know any unis in great lakes?"
+        ],
+        "belief": "name = villanova university ; region = great lakes",
+        "kb": "database 0 results",
+        "reply": "system : i couldn't find any colleges matching your query. would you like to try again?"
+    },
+    {
+        "history": [
+            "user : i want to find a college in dallas."
+        ],
+        "belief": "city = dallas",
+        "kb": "database 1 result",
+        "reply": "system : studying at [name] is [price_range]."
+    },
+    {
+        "history": [
+            "user : in michigan."
+        ],
+        "belief": "state = michigan",
+        "kb": "database 2 results",
+        "reply": "system : i found two universities that could be of interest to you, [name1] and [name2]. would you like to know more about one of them?"
+    },
+    {
+        "history": [
+            "user : i want to study at university of virginia  uva  uva."
+        ],
+        "belief": "alias = university of virginia  uva  uva",
+        "kb": "database 1 result",
+        "reply": "system : you can check out their website at [url]."
+    },
+    {
+        "history": [
+            "user : i want to study at university of virginia  uva  uva.",
+            "system : you can check out their website at [url].",
+            "user : please tell me more about stanford university."
+        ],
+        "belief": "alias = university of virginia  uva  uva ; name = stanford university",
+        "kb": "database 0 results",
+        "reply": "system : there is no college matching your preferences."
+    },
+    {
+        "history": [
+            "user : tell me more about the lehigh university."
+        ],
+        "belief": "name = lehigh university",
+        "kb": "database 1 result",
+        "reply": "system : studying at [name] is [price_range]."
+    },
+    {
+        "history": [
+            "user : tell me more about the lehigh university.",
+            "system : studying at [name] is [price_range].",
+            "user : i want to study in plains."
+        ],
+        "belief": "name = lehigh university ; region = plains",
+        "kb": "database 0 results",
+        "reply": "system : i'm sorry, i don't have any information on this."
+    },
+    {
+        "history": [
+            "user : i want to go to a college in baltimore."
+        ],
+        "belief": "city = baltimore",
+        "kb": "database 1 result",
+        "reply": "system : on average it costs [cost] dollars per year."
+    },
+    {
+        "history": [
+            "user : i want to go to a college in baltimore.",
+            "system : on average it costs [cost] dollars per year.",
+            "user : i want to study at university of michigan-ann arbor."
+        ],
+        "belief": "city = baltimore ; name = university of michigan-ann arbor",
+        "kb": "database 0 results",
+        "reply": "system : my apologies, it appears that i don't have any information about such colleges. would you like to try some other criteria?"
+    },
+    {
+        "history": [
+            "user : i want to study in winston-salem."
+        ],
+        "belief": "city = winston-salem",
+        "kb": "database 1 result",
+        "reply": "system : check [url] if you want more information later."
+    },
+    {
+        "history": [
+            "user : i want to study in winston-salem.",
+            "system : check [url] if you want more information later.",
+            "user : i want to know more about george washington university."
+        ],
+        "belief": "city = winston-salem ; name = george washington university",
+        "kb": "database 0 results",
+        "reply": "system : i'm sorry, i don't have any information on this."
+    },
+    {
+        "history": [
+            "user : how about smu?"
+        ],
+        "belief": "alias = smu",
+        "kb": "database 1 result",
+        "reply": "system : check [url] if you want more information later."
+    },
+    {
+        "history": [
+            "user : i'm looking for a college in southwest."
+        ],
+        "belief": "region = southwest",
+        "kb": "database 2 results",
+        "reply": "system : both, [name1] and [name2] match your preferences."
+    },
+    {
+        "history": [
+            "user : i want to study in chicago."
+        ],
+        "belief": "city = chicago",
+        "kb": "database 1 result",
+        "reply": "system : you can check out their website at [url]."
+    },
+    {
+        "history": [
+            "user : i'm looking for a college in new york."
+        ],
+        "belief": "state = new york",
+        "kb": "database 7 results",
+        "reply": "system : alright. there is a lot of colleges left. what specifically are you looking for?"
+    },
+    {
+        "history": [
+            "user : is there a college in san diego?"
+        ],
+        "belief": "city = san diego",
+        "kb": "database 1 result",
+        "reply": "system : [name] is located in [city]."
+    },
+    {
+        "history": [
+            "user : i'm looking for a college in the new england."
+        ],
+        "belief": "region = new england",
+        "kb": "database 9 results",
+        "reply": "system : would you like to narrow your search?"
+    },
+    {
+        "history": [
+            "user : i want to study in texas."
+        ],
+        "belief": "state = texas",
+        "kb": "database 1 result",
+        "reply": "system : [name] is a [control] top university with [students] undergraduate students. find out more about them at [url]."
+    },
+    {
+        "history": [
+            "user : how about rensselaer polytechnic institute?"
+        ],
+        "belief": "name = rensselaer polytechnic institute",
+        "kb": "database 1 result",
+        "reply": "system : [name] is a college in [city] and thus belongs to [region]."
+    },
+    {
+        "history": [
+            "user : i'm looking for a college in the southeast."
+        ],
+        "belief": "region = southeast",
+        "kb": "database 7 results",
+        "reply": "system : alright. there is a lot of colleges left. what specifically are you looking for?"
+    },
+    {
+        "history": [
+            "user : tell me more about the university of chicago."
+        ],
+        "belief": "name = university of chicago",
+        "kb": "database 1 result",
+        "reply": "system : [students] attent the university."
+    },
+    {
+        "history": [
+            "user : Yo"
+        ],
+        "belief": "none",
+        "kb": "Database 0 results",
+        "reply": "system : Hi, I'm the college adviser, how can I help you?"
+    },
+    {
+        "history": [
+            "user : Yo",
+            "system : Hi, I'm the college adviser, how can I help you?",
+            "user : i heard njit is great. can you tell me more about it?"
+        ],
+        "belief": "alias = njit",
+        "kb": "database 1 result",
+        "reply": "system : [name] is often called [alias]."
+    },
+    {
+        "history": [
+            "user : Yo",
+            "system : Hi, I'm the college adviser, how can I help you?",
+            "user : i heard njit is great. can you tell me more about it?",
+            "system : [name] is often called [alias].",
+            "user : i'm interested in colleges in connecticut."
+        ],
+        "belief": "alias = njit ; state = connecticut",
+        "kb": "database 0 results",
+        "reply": "system : i have no information on such a college."
+    },
+    {
+        "history": [
+            "user : what is the cal poly?"
+        ],
+        "belief": "alias = cal poly",
+        "kb": "database 1 result",
+        "reply": "system : [name] is a [control] top university in [city], [state] with [students] undergraduate students. you can check out their website at [url]."
+    },
+    {
+        "history": [
+            "user : can you give me more information on drexel university?"
+        ],
+        "belief": "name = drexel university",
+        "kb": "database 1 result",
+        "reply": "system : may i offer [name]?"
+    },
+    {
+        "history": [
+            "user : do you know any unis in california?"
+        ],
+        "belief": "state = california",
+        "kb": "database 7 results",
+        "reply": "system : would you like to narrow your search?"
+    },
+    {
+        "history": [
+            "user : do you know any unis in far west?"
+        ],
+        "belief": "region = far west",
+        "kb": "database 7 results",
+        "reply": "system : do you have any other requirements for the college?"
+    },
+    {
+        "history": [
+            "user : do you know any unis in far west?",
+            "system : do you have any other requirements for the college?",
+            "user : i want to study in new jersey."
+        ],
+        "belief": "region = far west ; state = new jersey",
+        "kb": "database 0 results",
+        "reply": "system : i have no information on such a college."
+    },
+    {
+        "history": [
+            "user : do you know any unis in far west?",
+            "system : do you have any other requirements for the college?",
+            "user : i want to study in new jersey.",
+            "system : i have no information on such a college.",
+            "user : Alright, bye!"
+        ],
+        "belief": "region = far west ; state = new jersey",
+        "kb": "database 0 results",
+        "reply": "system : You're welcome, have a nice day!"
+    },
+    {
+        "history": [
+            "user : university of virginia-main campus sounds interesting to me."
+        ],
+        "belief": "name = university of virginia-main campus",
+        "kb": "database 1 result",
+        "reply": "system : [students] attent the university."
+    },
+    {
+        "history": [
+            "user : university of virginia-main campus sounds interesting to me.",
+            "system : [students] attent the university.",
+            "user : in arizona."
+        ],
+        "belief": "name = university of virginia-main campus ; state = arizona",
+        "kb": "database 0 results",
+        "reply": "system : there is no college matching your preferences."
+    },
+    {
+        "history": [
+            "user : i heard virginia polytechnic institute and state university is great. can you tell me more about it?"
+        ],
+        "belief": "name = virginia polytechnic institute and state university",
+        "kb": "database 1 result",
+        "reply": "system : on average, students accepted into [name] have an sat score of [sat].the [name] could interest you. would you like to know more about it?"
+    },
+    {
+        "history": [
+            "user : do you know any unis in ohio?"
+        ],
+        "belief": "state = ohio",
+        "kb": "database 1 result",
+        "reply": "system : on average, students accepted into [name] have an sat score of [sat].the [name] could interest you. would you like to know more about it?"
+    },
+    {
+        "history": [
+            "user : i want to go to a college in [city]."
+        ],
+        "belief": "state = north carolina",
+        "kb": "database 2 results",
+        "reply": "system : there's two colleges that match your preferences: [name1] and [name2]. do you want to know more about one of them?"
+    },
+    {
+        "history": [
+            "user : Yo"
+        ],
+        "belief": "none",
+        "kb": "Database 0 results",
+        "reply": "system : Hi, I'm the college adviser, how can I help you?"
+    },
+    {
+        "history": [
+            "user : Yo",
+            "system : Hi, I'm the college adviser, how can I help you?",
+            "user : i'm interested in colleges in rhode island."
+        ],
+        "belief": "state = rhode island",
+        "kb": "database 1 result",
+        "reply": "system : [name] is often called [alias]."
+    },
+    {
+        "history": [
+            "user : in virginia."
+        ],
+        "belief": "state = virginia",
+        "kb": "database 2 results",
+        "reply": "system : both, [name1] and [name2] match your preferences."
+    },
+    {
+        "history": [
+            "user : Yo"
+        ],
+        "belief": "none",
+        "kb": "Database 0 results",
+        "reply": "system : Hi, how may I be of assistance?"
+    },
+    {
+        "history": [
+            "user : Yo",
+            "system : Hi, how may I be of assistance?",
+            "user : i want to find a college in ann arbor."
+        ],
+        "belief": "city = ann arbor",
+        "kb": "database 1 result",
+        "reply": "system : for more information check its website at [url]."
+    },
+    {
+        "history": [
+            "user : can you give me more information on columbia university in the city of new york?"
+        ],
+        "belief": "name = columbia university in the city of new york",
+        "kb": "database 1 result",
+        "reply": "system : on average it costs [cost] dollars per year."
+    },
+    {
+        "history": [
+            "user : can you give me more information on columbia university in the city of new york?",
+            "system : on average it costs [cost] dollars per year.",
+            "user : i heard scu is great. can you tell me more about it?"
+        ],
+        "belief": "name = columbia university in the city of new york ; alias = scu",
+        "kb": "database 0 results",
+        "reply": "system : i couldn't find any colleges matching your query. would you like to try again?"
+    },
+    {
+        "history": [
+            "user : tell me more about the california polytechnic state university-san luis obispo."
+        ],
+        "belief": "name = california polytechnic state university-san luis obispo",
+        "kb": "database 1 result",
+        "reply": "system : check [url] if you want more information later."
+    },
+    {
+        "history": [
+            "user : what is the cwru|case|case western reserve?"
+        ],
+        "belief": "alias = cwru|case|case western reserve",
+        "kb": "database 1 result",
+        "reply": "system : for example [name] is located in [city]. the completion rate is [completion], but it is [price_range]."
+    },
+    {
+        "history": [
+            "user : what is the cwru|case|case western reserve?",
+            "system : for example [name] is located in [city]. the completion rate is [completion], but it is [price_range].",
+            "user : in missouri."
+        ],
+        "belief": "alias = cwru|case|case western reserve ; state = missouri",
+        "kb": "database 0 results",
+        "reply": "system : i couldn't find a college for your request."
+    },
+    {
+        "history": [
+            "user : i want more information on colleges in illinois."
+        ],
+        "belief": "state = illinois",
+        "kb": "database 2 results",
+        "reply": "system : i found two universities that could be of interest to you, [name1] and [name2]. would you like to know more about one of them?"
+    },
+    {
+        "history": [
+            "user : i want to go to a college in saint louis."
+        ],
+        "belief": "city = saint louis",
+        "kb": "database 1 result",
+        "reply": "system : i found a college that could interest you: [name]. do you want to know more about it?"
+    },
+    {
+        "history": [
+            "user : i heard pace university is great. can you tell me more about it?"
+        ],
+        "belief": "alias = pace university",
+        "kb": "database 1 result",
+        "reply": "system : the [name] offers studying [area],in case you want more information: visit [url]."
+    },
+    {
+        "history": [
+            "user : i heard pace university is great. can you tell me more about it?",
+            "system : the [name] offers studying [area],in case you want more information: visit [url].",
+            "user : in newark."
+        ],
+        "belief": "alias = pace university ; city = newark",
+        "kb": "database 0 results",
+        "reply": "system : there is no college matching your preferences."
+    },
+    {
+        "history": [
+            "user : what is the carnegie mellon; cmu?"
+        ],
+        "belief": "alias = carnegie mellon; cmu",
+        "kb": "database 1 result",
+        "reply": "system : check [url] if you want more information later."
+    },
+    {
+        "history": [
+            "user : i heard johns hopkins is great. can you tell me more about it?"
+        ],
+        "belief": "alias = johns hopkins",
+        "kb": "database 1 result",
+        "reply": "system : okay, how about [name]? it's a great university in [city], [state]."
+    },
+    {
+        "history": [
+            "user : i want to go to a college in [city]."
+        ],
+        "belief": "state = pennsylvania",
+        "kb": "database 5 results",
+        "reply": "system : do you have anything else in mind?"
+    },
+    {
+        "history": [
+            "user : i want to go to a college in [city]."
+        ],
+        "belief": "state = indiana",
+        "kb": "database 1 result",
+        "reply": "system : on average, students accepted into [name] have an sat score of [sat].the [name] could interest you. would you like to know more about it?"
+    },
+    {
+        "history": [
+            "user : i want to go to a college in [city].",
+            "system : on average, students accepted into [name] have an sat score of [sat].the [name] could interest you. would you like to know more about it?",
+            "user : can you give me more information on santa clara university?"
+        ],
+        "belief": "state = indiana ; name = santa clara university",
+        "kb": "database 0 results",
+        "reply": "system : i couldn't find any colleges matching your query. would you like to try again?"
+    },
+    {
+        "history": [
+            "user : i'm looking for a college in georgia."
+        ],
+        "belief": "state = georgia",
+        "kb": "database 2 results",
+        "reply": "system : for example [name] is located in [city]. the completion rate is [completion], but it is [price_range]."
+    },
+    {
+        "history": [
+            "user : i'm looking for a college in georgia.",
+            "system : for example [name] is located in [city]. the completion rate is [completion], but it is [price_range].",
+            "user : i heard washu is great. can you tell me more about it?"
+        ],
+        "belief": "state = georgia ; alias = washu",
+        "kb": "database 0 results",
+        "reply": "system : i'm sorry, i don't have any information on this."
+    },
+    {
+        "history": [
+            "user : i'm looking for a college in georgia.",
+            "system : for example [name] is located in [city]. the completion rate is [completion], but it is [price_range].",
+            "user : i heard washu is great. can you tell me more about it?",
+            "system : i'm sorry, i don't have any information on this.",
+            "user : Thanks, goodbye!"
+        ],
+        "belief": "state = georgia ; alias = washu",
+        "kb": "database 0 results",
+        "reply": "system : Goodbye"
+    },
+    {
+        "history": [
+            "user : in ithaca."
+        ],
+        "belief": "city = ithaca",
+        "kb": "database 1 result",
+        "reply": "system : [name] is often called [alias]."
+    },
+    {
+        "history": [
+            "user : in ithaca.",
+            "system : [name] is often called [alias].",
+            "user : Thanks, that's all."
+        ],
+        "belief": "city = ithaca",
+        "kb": "database 1 result",
+        "reply": "system : Your're welcome. Goodbye!"
+    },
+    {
+        "history": [
+            "user : i want to study in troy."
+        ],
+        "belief": "city = troy",
+        "kb": "database 1 result",
+        "reply": "system : for more information check its website at [url]."
+    },
+    {
+        "history": [
+            "user : i heard nan is great. can you tell me more about it?"
+        ],
+        "belief": "alias = nan",
+        "kb": "database 22 results",
+        "reply": "system : there's multiple colleges that match your criteria. would you like to narrow down your search?"
+    },
+    {
+        "history": [
+            "user : i heard nan is great. can you tell me more about it?",
+            "system : there's multiple colleges that match your criteria. would you like to narrow down your search?",
+            "user : i want to study in san francisco."
+        ],
+        "belief": "alias = nan ; city = san francisco",
+        "kb": "database 1 result",
+        "reply": "system : [name] is a [control] top university in [city], [state] with [students] undergraduate students. you can check out their website at [url]."
+    },
+    {
+        "history": [
+            "user : in rochester."
+        ],
+        "belief": "city = rochester",
+        "kb": "database 1 result",
+        "reply": "system : at [name] graduates earn about [earnings]."
+    },
+    {
+        "history": [
+            "user : in rochester.",
+            "system : at [name] graduates earn about [earnings].",
+            "user : please tell me more about university of rochester."
+        ],
+        "belief": "city = rochester ; name = university of rochester",
+        "kb": "database 1 result",
+        "reply": "system : [name] is a [control] top university in [city], [state] with [students] undergraduate students. find out more about the at [url]."
+    },
+    {
+        "history": [
+            "user : in santa clara."
+        ],
+        "belief": "city = santa clara",
+        "kb": "database 1 result",
+        "reply": "system : for example [name] is located in [city]. the completion rate is [completion], but it is [price_range]."
+    },
+    {
+        "history": [
+            "user : i heard massachusetts institute of technology is great. can you tell me more about it?"
+        ],
+        "belief": "name = massachusetts institute of technology",
+        "kb": "database 1 result",
+        "reply": "system : you can check out their website at [url]."
+    },
+    {
+        "history": [
+            "user : i heard massachusetts institute of technology is great. can you tell me more about it?",
+            "system : you can check out their website at [url].",
+            "user : i want to go to a college in villanova."
+        ],
+        "belief": "name = massachusetts institute of technology ; city = villanova",
+        "kb": "database 0 results",
+        "reply": "system : i didn't find a result. is there anything else i can help you with?"
+    },
+    {
+        "history": [
+            "user : i heard massachusetts institute of technology is great. can you tell me more about it?",
+            "system : you can check out their website at [url].",
+            "user : i want to go to a college in villanova.",
+            "system : i didn't find a result. is there anything else i can help you with?",
+            "user : That sounds good, thank you!"
+        ],
+        "belief": "name = massachusetts institute of technology ; city = villanova",
+        "kb": "database 0 results",
+        "reply": "system : Goodbye"
+    },
+    {
+        "history": [
+            "user : is there a college in atlanta?"
+        ],
+        "belief": "city = atlanta",
+        "kb": "database 2 results",
+        "reply": "system : there's two colleges that match your preferences: [name1] and [name2]. do you want to know more about one of them?"
+    },
+    {
+        "history": [
+            "user : i'm looking for a college in providence."
+        ],
+        "belief": "city = providence",
+        "kb": "database 1 result",
+        "reply": "system : [name] is a [control] top university in [city], [state] with [students] undergraduate students. find out more about the at [url]."
+    },
+    {
+        "history": [
+            "user : i'm looking for a college in providence.",
+            "system : [name] is a [control] top university in [city], [state] with [students] undergraduate students. find out more about the at [url].",
+            "user : how about virginia tech?"
+        ],
+        "belief": "city = providence ; alias = virginia tech",
+        "kb": "database 0 results",
+        "reply": "system : there is no college matching your preferences."
+    },
+    {
+        "history": [
+            "user : i heard drexel is great. can you tell me more about it?"
+        ],
+        "belief": "alias = drexel",
+        "kb": "database 1 result",
+        "reply": "system : [name] is a [control] top university with [students] undergraduate students. find out more about them at [url]."
+    },
+    {
+        "history": [
+            "user : can you give me more information on case western reserve university?"
+        ],
+        "belief": "name = case western reserve university",
+        "kb": "database 1 result",
+        "reply": "system : the [name] is [price_range] and is located in [region]. there are courses offered in [area]. do you need more information?"
+    },
+    {
+        "history": [
+            "user : do you know any unis in hanover?"
+        ],
+        "belief": "city = hanover",
+        "kb": "database 1 result",
+        "reply": "system : [name] has an admission rate of [admission_rate]"
+    },
+    {
+        "history": [
+            "user : Hi."
+        ],
+        "belief": "none",
+        "kb": "Database 0 results",
+        "reply": "system : Hi how can I help you?"
+    },
+    {
+        "history": [
+            "user : Hi.",
+            "system : Hi how can I help you?",
+            "user : do you know any unis in evanston?"
+        ],
+        "belief": "city = evanston",
+        "kb": "database 1 result",
+        "reply": "system : for example [name] is located in [city]. the completion rate is [completion], but it is [price_range]."
+    },
+    {
+        "history": [
+            "user : Hi.",
+            "system : Hi how can I help you?",
+            "user : do you know any unis in evanston?",
+            "system : for example [name] is located in [city]. the completion rate is [completion], but it is [price_range].",
+            "user : please tell me more about fairfield university."
+        ],
+        "belief": "city = evanston ; name = fairfield university",
+        "kb": "database 0 results",
+        "reply": "system : i didn't find a result. is there anything else i can help you with?"
+    },
+    {
+        "history": [
+            "user : is there a college in berkeley?"
+        ],
+        "belief": "city = berkeley",
+        "kb": "database 1 result",
+        "reply": "system : you can check out their website at [url]."
+    },
+    {
+        "history": [
+            "user : is there a college in berkeley?",
+            "system : you can check out their website at [url].",
+            "user : i heard uc berkeley is great. can you tell me more about it?"
+        ],
+        "belief": "city = berkeley ; alias = uc berkeley",
+        "kb": "database 1 result",
+        "reply": "system : on average, students graduate there with [debt] dollars in debt."
+    },
+    {
+        "history": [
+            "user : is there a college in berkeley?",
+            "system : you can check out their website at [url].",
+            "user : i heard uc berkeley is great. can you tell me more about it?",
+            "system : on average, students graduate there with [debt] dollars in debt.",
+            "user : I don't need more information. Bye!"
+        ],
+        "belief": "city = berkeley ; alias = uc berkeley",
+        "kb": "database 1 result",
+        "reply": "system : Goodbye!"
+    },
+    {
+        "history": [
+            "user : i want to study in nashville."
+        ],
+        "belief": "city = nashville",
+        "kb": "database 1 result",
+        "reply": "system : [name] is a college in [city] and thus belongs to [region]."
+    },
+    {
+        "history": [
+            "user : what is the penn, u of pa, u-penn, u of p, pennsylvania, upenn, pennsylvania university, university of pennsylvania, wharton, wharton school of business?"
+        ],
+        "belief": "alias = penn, u of pa, u-penn, u of p, pennsylvania, upenn, pennsylvania university, university of pennsylvania, wharton, wharton school of business",
+        "kb": "database 1 result",
+        "reply": "system : you can check out their website at [url]."
+    },
+    {
+        "history": [
+            "user : i'm looking for a college in blacksburg."
+        ],
+        "belief": "city = blacksburg",
+        "kb": "database 1 result",
+        "reply": "system : [name] has an admission rate of [admission_rate]"
+    },
+    {
+        "history": [
+            "user : i'm looking for a college in blacksburg.",
+            "system : [name] has an admission rate of [admission_rate]",
+            "user : Alright, bye!"
+        ],
+        "belief": "city = blacksburg",
+        "kb": "database 1 result",
+        "reply": "system : See you soon."
+    },
+    {
+        "history": [
+            "user : please tell me more about university of southern california."
+        ],
+        "belief": "name = university of southern california",
+        "kb": "database 1 result",
+        "reply": "system : studying at [name] is [price_range]."
+    },
+    {
+        "history": [
+            "user : i want to find a college in bronx."
+        ],
+        "belief": "city = bronx",
+        "kb": "database 1 result",
+        "reply": "system : [name] matches your preferences."
+    },
+    {
+        "history": [
+            "user : i want to find a college in bronx.",
+            "system : [name] matches your preferences.",
+            "user : i want to study at gwu|gw."
+        ],
+        "belief": "city = bronx ; alias = gwu|gw",
+        "kb": "database 0 results",
+        "reply": "system : i have no information on such a college."
+    },
+    {
+        "history": [
+            "user : what is the georgetown|gu?"
+        ],
+        "belief": "alias = georgetown|gu",
+        "kb": "database 1 result",
+        "reply": "system : [name] might be a match for you. do you want to know more about it?"
+    },
+    {
+        "history": [
+            "user : Hi."
+        ],
+        "belief": "none",
+        "kb": "Database 0 results",
+        "reply": "system : Hi, how may I be of assistance?"
+    },
+    {
+        "history": [
+            "user : Hi.",
+            "system : Hi, how may I be of assistance?",
+            "user : in philadelphia."
+        ],
+        "belief": "city = philadelphia",
+        "kb": "database 2 results",
+        "reply": "system : i found two universities that could be of interest to you, [name1] and [name2]. would you like to know more about one of them?"
+    },
+    {
+        "history": [
+            "user : Hi.",
+            "system : Hi, how may I be of assistance?",
+            "user : in philadelphia.",
+            "system : i found two universities that could be of interest to you, [name1] and [name2]. would you like to know more about one of them?",
+            "user : what is the dartmouth, big green?"
+        ],
+        "belief": "city = philadelphia ; alias = dartmouth, big green",
+        "kb": "database 0 results",
+        "reply": "system : i couldn't find any colleges matching your query. do you want to change something?"
+    },
+    {
+        "history": [
+            "user : i want to find a college in new york."
+        ],
+        "belief": "city = new york",
+        "kb": "database 3 results",
+        "reply": "system : would you like to narrow your search?"
+    },
+    {
+        "history": [
+            "user : do you know any unis in phoenix?"
+        ],
+        "belief": "city = phoenix",
+        "kb": "database 1 result",
+        "reply": "system : [name] is often called [alias]."
+    },
+    {
+        "history": [
+            "user : i want to go to a college in charlottesville."
+        ],
+        "belief": "city = charlottesville",
+        "kb": "database 1 result",
+        "reply": "system : studying at [name] is [price_range]."
+    },
+    {
+        "history": [
+            "user : i want to study at usc."
+        ],
+        "belief": "alias = usc",
+        "kb": "database 1 result",
+        "reply": "system : i found a college that could interest you: [name]. do you want to know more about it?"
+    },
+    {
+        "history": [
+            "user : is there a college in washington?"
+        ],
+        "belief": "city = washington",
+        "kb": "database 2 results",
+        "reply": "system : both, [name1] and [name2] match your preferences."
+    },
+    {
+        "history": [
+            "user : how about u of michigan|u of m|univ of michigan|u michigan ann arbor|university of michigan ann arbor?"
+        ],
+        "belief": "alias = u of michigan|u of m|univ of michigan|u michigan ann arbor|university of michigan ann arbor",
+        "kb": "database 1 result",
+        "reply": "system : [name] is often called [alias]."
+    },
+    {
+        "history": [
+            "user : how about u of michigan|u of m|univ of michigan|u michigan ann arbor|university of michigan ann arbor?",
+            "system : [name] is often called [alias].",
+            "user : please tell me more about carnegie mellon university."
+        ],
+        "belief": "alias = u of michigan|u of m|univ of michigan|u michigan ann arbor|university of michigan ann arbor ; name = carnegie mellon university",
+        "kb": "database 0 results",
+        "reply": "system : i couldn't find any colleges matching your query. do you want to change something?"
+    },
+    {
+        "history": [
+            "user : i want to know more about southern methodist university."
+        ],
+        "belief": "name = southern methodist university",
+        "kb": "database 1 result",
+        "reply": "system : your expected earnings will be around [earnings] dollars anually."
+    },
+    {
+        "history": [
+            "user : i want to know more about southern methodist university.",
+            "system : your expected earnings will be around [earnings] dollars anually.",
+            "user : i want to find a college in princeton."
+        ],
+        "belief": "name = southern methodist university ; city = princeton",
+        "kb": "database 0 results",
+        "reply": "system : i didn't find a result. is there anything else i can help you with?"
+    },
+    {
+        "history": [
+            "user : i want to study at rpi, rensselaer."
+        ],
+        "belief": "alias = rpi, rensselaer",
+        "kb": "database 1 result",
+        "reply": "system : may i offer [name]?"
+    },
+    {
+        "history": [
+            "user : please tell me more about tufts university."
+        ],
+        "belief": "name = tufts university",
+        "kb": "database 1 result",
+        "reply": "system : for example [name] is located in [city]. the completion rate is [completion], but it is [price_range]."
+    },
+    {
+        "history": [
+            "user : i heard usd is great. can you tell me more about it?"
+        ],
+        "belief": "alias = usd",
+        "kb": "database 1 result",
+        "reply": "system : [name] is often called [alias]."
+    },
+    {
+        "history": [
+            "user : i heard usd is great. can you tell me more about it?",
+            "system : [name] is often called [alias].",
+            "user : i want to study in notre dame."
+        ],
+        "belief": "alias = usd ; city = notre dame",
+        "kb": "database 0 results",
+        "reply": "system : i couldn't find any colleges matching your query. do you want to change something?"
+    },
+    {
+        "history": [
+            "user : i want to study in durham."
+        ],
+        "belief": "city = durham",
+        "kb": "database 1 result",
+        "reply": "system : [name] might be a match for you. do you want to know more about it?"
+    },
+    {
+        "history": [
+            "user : i want to study in durham.",
+            "system : [name] might be a match for you. do you want to know more about it?",
+            "user : i want to study at columbia university."
+        ],
+        "belief": "city = durham ; alias = columbia university",
+        "kb": "database 0 results",
+        "reply": "system : there is no college matching your preferences."
+    },
+    {
+        "history": [
+            "user : can you give me more information on dartmouth college?"
+        ],
+        "belief": "name = dartmouth college",
+        "kb": "database 1 result",
+        "reply": "system : [name] is a [control] top university with [students] undergraduate students. find out more about them at [url]."
+    },
+    {
+        "history": [
+            "user : can you give me more information on dartmouth college?",
+            "system : [name] is a [control] top university with [students] undergraduate students. find out more about them at [url].",
+            "user : do you know any unis in fairfield?"
+        ],
+        "belief": "name = dartmouth college ; city = fairfield",
+        "kb": "database 0 results",
+        "reply": "system : i couldn't find a college for your request."
+    },
+    {
+        "history": [
+            "user : i want to study at johns hopkins university."
+        ],
+        "belief": "name = johns hopkins university",
+        "kb": "database 1 result",
+        "reply": "system : [name] is a [control] top university in [city], [state] with [students] undergraduate students. you can check out their website at [url]."
+    },
+    {
+        "history": [
+            "user : i want to study in bethlehem."
+        ],
+        "belief": "city = bethlehem",
+        "kb": "database 1 result",
+        "reply": "system : for more information check its website at [url]."
+    },
+    {
+        "history": [
+            "user : i want to study in bethlehem.",
+            "system : for more information check its website at [url].",
+            "user : Alright, bye!"
+        ],
+        "belief": "city = bethlehem",
+        "kb": "database 1 result",
+        "reply": "system : I hope I could help you."
+    },
+    {
+        "history": [
+            "user : tell me more about the harvard university."
+        ],
+        "belief": "name = harvard university",
+        "kb": "database 1 result",
+        "reply": "system : for example [name] is located in [city]. the completion rate is [completion], but it is [price_range]."
+    },
+    {
+        "history": [
+            "user : i'm looking for a college in boston."
+        ],
+        "belief": "city = boston",
+        "kb": "database 1 result",
+        "reply": "system : [name] matches your preferences."
+    },
+    {
+        "history": [
+            "user : i'm looking for a college in boston.",
+            "system : [name] matches your preferences.",
+            "user : can you give me more information on new york university?"
+        ],
+        "belief": "city = boston ; name = new york university",
+        "kb": "database 0 results",
+        "reply": "system : there is no college matching your preferences."
+    },
+    {
+        "history": [
+            "user : i want to go to a college in cleveland."
+        ],
+        "belief": "city = cleveland",
+        "kb": "database 1 result",
+        "reply": "system : [name] is a [control] top university in [city], [state] with [students] undergraduate students. find out more about the at [url]."
+    },
+    {
+        "history": [
+            "user : is there a college in stanford?"
+        ],
+        "belief": "city = stanford",
+        "kb": "database 1 result",
+        "reply": "system : [name] is a college in [city] and thus belongs to [region]."
+    },
+    {
+        "history": [
+            "user : What's up?"
+        ],
+        "belief": "none",
+        "kb": "Database 0 results",
+        "reply": "system : Tell me what you are looking for."
+    },
+    {
+        "history": [
+            "user : What's up?",
+            "system : Tell me what you are looking for.",
+            "user : can you give me more information on georgia institute of technology-main campus?"
+        ],
+        "belief": "name = georgia institute of technology-main campus",
+        "kb": "database 1 result",
+        "reply": "system : on average, students accepted into [name] have an sat score of [sat].the [name] could interest you. would you like to know more about it?"
+    },
+    {
+        "history": [
+            "user : can you give me more information on university of pennsylvania?"
+        ],
+        "belief": "name = university of pennsylvania",
+        "kb": "database 1 result",
+        "reply": "system : [name] is a [control] top university in [city], [state] with [students] undergraduate students. you can check out their website at [url]."
+    },
+    {
+        "history": [
+            "user : can you give me more information on university of pennsylvania?",
+            "system : [name] is a [control] top university in [city], [state] with [students] undergraduate students. you can check out their website at [url].",
+            "user : Thanks for your help."
+        ],
+        "belief": "name = university of pennsylvania",
+        "kb": "database 1 result",
+        "reply": "system : Goodbye"
+    },
+    {
+        "history": [
+            "user : i heard princeton university is great. can you tell me more about it?"
+        ],
+        "belief": "name = princeton university",
+        "kb": "database 1 result",
+        "reply": "system : you can check out their website at [url]."
+    },
+    {
+        "history": [
+            "user : i heard princeton university is great. can you tell me more about it?",
+            "system : you can check out their website at [url].",
+            "user : I see, thanks, bye"
+        ],
+        "belief": "name = princeton university",
+        "kb": "database 1 result",
+        "reply": "system : You're welcome, have a nice day!"
+    },
+    {
+        "history": [
+            "user : grand canyon university sounds interesting to me."
+        ],
+        "belief": "name = grand canyon university",
+        "kb": "database 1 result",
+        "reply": "system : on average, students accepted into [name] have an sat score of [sat].the [name] could interest you. would you like to know more about it?"
+    },
+    {
+        "history": [
+            "user : please tell me more about michigan technological university."
+        ],
+        "belief": "name = michigan technological university",
+        "kb": "database 1 result",
+        "reply": "system : [name] matches your preferences."
+    },
+    {
+        "history": [
+            "user : please tell me more about michigan technological university.",
+            "system : [name] matches your preferences.",
+            "user : Thanks, that's all."
+        ],
+        "belief": "name = michigan technological university",
+        "kb": "database 1 result",
+        "reply": "system : I hope I could help you."
+    },
+    {
+        "history": [
+            "user : i want to know more about university of california-berkeley."
+        ],
+        "belief": "name = university of california-berkeley",
+        "kb": "database 1 result",
+        "reply": "system : [name] has an admission rate of [admission_rate]"
+    },
+    {
+        "history": [
+            "user : i want to know more about university of california-berkeley.",
+            "system : [name] has an admission rate of [admission_rate]",
+            "user : I see, thanks, bye"
+        ],
+        "belief": "name = university of california-berkeley",
+        "kb": "database 1 result",
+        "reply": "system : I hope I could help you."
+    },
+    {
+        "history": [
+            "user : i want to study at northeastern university."
+        ],
+        "belief": "name = northeastern university",
+        "kb": "database 1 result",
+        "reply": "system : check [url] if you want more information later."
+    },
+    {
+        "history": [
+            "user : i want to study at boston college."
+        ],
+        "belief": "name = boston college",
+        "kb": "database 1 result",
+        "reply": "system : [name] is located in [city]."
+    }
+]

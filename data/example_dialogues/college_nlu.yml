@@ -1,0 +1,26 @@
+
+# note: create kb.soloist.dialogs.json file with help of convert_college.py
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - good morning
+      - good evening
+      - hey there
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - see you around
+      - see you later
+      - see you
+  - intent: query_knowledge_base
+    examples: |    
+      - which [college]{"entity":"object_type","value":"college"} can you recommend?
+      - is there a college in [los angeles]{"entity":"place","value":"los angeles"}?
+      - show me some [colleges] {"entity":"object_type","value":"colleges"} with their [admission rate]{"entity":"attribute"}
+      - is [yale]{"entity":"college","value":"yale"} affordable?
+      - what is the average [sat score]{"entity":"object type","value":"sat score"}?
