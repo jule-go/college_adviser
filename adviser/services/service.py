@@ -31,9 +31,10 @@ import zmq
 from zmq import Context, Socket
 from zmq.devices import ThreadProxy, ProcessProxy
 
-from utils.domain.domain import Domain
-from utils.logger import DiasysLogger
-from utils.topics import Topic
+from adviser.utils.domain.domain import Domain
+# from utils.domain.domain import Domain
+from adviser.utils.logger import DiasysLogger
+from adviser.utils.topics import Topic
 
 
 def _send_msg(pub_channel: Socket, topic: str, content: Any):

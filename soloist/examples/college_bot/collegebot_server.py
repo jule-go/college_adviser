@@ -5,8 +5,10 @@ import flask
 import json, re
 from collections import defaultdict
 import random
-from db_interface import query_from_db
-from server import sample,sample2
+from .db_interface import query_from_db
+from .soloist.server import sample,sample2
+from .soloist.server import main
+from .soloist.server import *
 import copy
 import functools
 from nltk.tokenize import sent_tokenize, word_tokenize
@@ -14,7 +16,7 @@ import os
 from queue import Queue
 from threading import Thread
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '3'
+os.environ['CUDA_VISIBLE_DEVICES'] = '8'
 os.environ['HF_MODELS_CACHE'] = '/mount/studenten-temp1/users/zabereus/adviser/soloist_env/soloist/cache'
 os.environ['TRANSFORMERS_CACHE'] = '/mount/studenten-temp1/users/zabereus/adviser/soloist_env/soloist/cache'
 
@@ -155,15 +157,15 @@ def fill_delex(pattern:str, rows: list):
 
 
 # if __name__ == "__main__":
-
+#     # from soloist.server import *
 #     args.model_name_or_path = '/mount/studenten-temp1/users/zabereus/adviser/soloist_env/soloist/examples/college_bot/college_model'
 #     main()
 
-#     # predictor(["What is the admission rate at Harvard"])
-#     # print("-------------------")
-#     # predictor(["I'm looking for expensive colleges in New England", "What would you like to study there?", "physics"])    
-#     # print("-------------------")
-#     # predictor(["show me affordable colleges", "Where would you like to study?", "Texas"])
+#     predictor(["What is the admission rate at Harvard"])
+#     print("-------------------")
+#     predictor(["I'm looking for expensive colleges in New England", "What would you like to study there?", "physics"])    
+#     print("-------------------")
+#     predictor(["show me affordable colleges", "Where would you like to study?", "Texas"])
 
 
 #     worker = Thread(target=generate_for_queue, args=(rgi_queue, rgo_queue,))

@@ -21,7 +21,7 @@
 
 import copy
 
-from utils.domain.jsonlookupdomain import JSONLookupDomain
+from adviser.utils.domain.jsonlookupdomain import JSONLookupDomain
 
 
 class BeliefState:

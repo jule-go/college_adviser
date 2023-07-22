@@ -24,7 +24,7 @@ import sqlite3
 from io import StringIO
 from typing import List, Iterable
 
-from utils.domain import Domain
+from adviser.utils.domain import Domain
 
 
 class JSONLookupDomain(Domain):

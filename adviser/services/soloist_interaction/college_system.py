@@ -3,14 +3,21 @@ import os
 import re
 from typing import List
 
-from services.service import PublishSubscribe
-from services.service import Service
-from utils import UserAct, UserActionType
-from utils.beliefstate import BeliefState
-from utils.common import Language
-from utils.domain.jsonlookupdomain import JSONLookupDomain
-from utils.logger import DiasysLogger
-from utils.sysact import SysAct, SysActionType
+# imports needed for our trained soloist model
+from soloist.examples.college_bot.soloist.server import *
+print("1 worked")
+from soloist.examples.college_bot.collegebot_server import *
+print("2 worked")
+
+from adviser.services.service import PublishSubscribe
+from adviser.services.service import Service
+from adviser.utils import UserAct, UserActionType
+from adviser.utils.beliefstate import BeliefState
+from adviser.utils.common import Language
+from adviser.utils.domain.jsonlookupdomain import JSONLookupDomain
+from adviser.utils.logger import DiasysLogger
+from adviser.utils.sysact import SysAct, SysActionType
+print("adviser things worked")
 
 
 
@@ -45,6 +52,7 @@ class CollegeAdviser(Service):
         self.logger = logger
         self.language = language if language else Language.ENGLISH
         self.domain_name = domain.get_domain_name()
+        self.conversation_tracker = [] # to keep track of conversation between user and system
 
 
     def dialog_start(self):
@@ -52,13 +60,18 @@ class CollegeAdviser(Service):
         Initiates the trained soloist model
 
         """
+        # from college_adviser.soloist.examples.college_bot.soloist.server import *
         args.model_name_or_path = self.model_path
         main()
+        self.dialogue_history = [] # keep track of user and system utterances
 
-    @PublishSubscribe(sub_topics=["user_utterance"], pub_topics=["sys_acts"])
+    @PublishSubscribe(sub_topics=["user_utterance"], pub_topics=["sys_utterance"])
     def communicate(self,user_utterance: str = None):
         """
+        available topics: user_utterance user_acts sys_state sys_act sys_utterance beliefstate
         """
-        system_utterance, beliefstate = predictor([user_utterance])
+        self.dialogue_history += [user_utterance]
+        system_utterance, beliefstate = predictor(self.dialogue_history)
+        self.dialogue_history += [system_utterance]
 
         return {'sys_utterance': system_utterance}

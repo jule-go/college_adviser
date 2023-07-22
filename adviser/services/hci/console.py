@@ -23,11 +23,11 @@ import os
 import sys
 import time
 
-from services.service import PublishSubscribe
-from services.service import Service
-from utils.common import Language
-from utils.domain import Domain
-from utils.topics import Topic
+from adviser.services.service import PublishSubscribe
+from adviser.services.service import Service
+from adviser.utils.common import Language
+from adviser.utils.domain import Domain
+from adviser.utils.topics import Topic
 
 
 class ConsoleInput(Service):
