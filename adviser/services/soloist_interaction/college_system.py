@@ -17,6 +17,8 @@ from adviser.utils.common import Language
 from adviser.utils.domain.jsonlookupdomain import JSONLookupDomain
 from adviser.utils.logger import DiasysLogger
 from adviser.utils.sysact import SysAct, SysActionType
+from adviser.utils.topics import Topic
+
 print("adviser things worked")
 
 
@@ -62,16 +64,19 @@ class CollegeAdviser(Service):
         """
         # from college_adviser.soloist.examples.college_bot.soloist.server import *
         args.model_name_or_path = self.model_path
-        main()
+        main() # of server
         self.dialogue_history = [] # keep track of user and system utterances
 
-    @PublishSubscribe(sub_topics=["user_utterance"], pub_topics=["sys_utterance"])
-    def communicate(self,user_utterance: str = None):
+    @PublishSubscribe(sub_topics=["gen_user_utterance"], pub_topics=["sys_utterance"])
+    def communicate(self, gen_user_utterance: str = None):
         """
         available topics: user_utterance user_acts sys_state sys_act sys_utterance beliefstate
         """
+        print("arrived here")
+        user_utterance = gen_user_utterance
         self.dialogue_history += [user_utterance]
         system_utterance, beliefstate = predictor(self.dialogue_history)
         self.dialogue_history += [system_utterance]
 
         return {'sys_utterance': system_utterance}
+

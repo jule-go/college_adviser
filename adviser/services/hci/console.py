@@ -134,3 +134,4 @@ class ConsoleOutput(Service):
             raise ValueError("There is no system utterance. Did you forget to call an NLG module before?")
 
         return {Topic.DIALOG_END: 'bye' in sys_utterance}
+
