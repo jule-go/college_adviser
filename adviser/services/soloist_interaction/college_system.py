@@ -5,21 +5,18 @@ from typing import List
 
 # imports needed for our trained soloist model
 from soloist.examples.college_bot.soloist.server import *
-print("1 worked")
 from soloist.examples.college_bot.collegebot_server import *
-print("2 worked")
 
 from adviser.services.service import PublishSubscribe
 from adviser.services.service import Service
 from adviser.utils import UserAct, UserActionType
 from adviser.utils.beliefstate import BeliefState
 from adviser.utils.common import Language
-from adviser.utils.domain.jsonlookupdomain import JSONLookupDomain
+# from adviser.utils.domain.jsonlookupdomain import JSONLookupDomain
+from adviser.utils.domain import Domain
 from adviser.utils.logger import DiasysLogger
 from adviser.utils.sysact import SysAct, SysActionType
 from adviser.utils.topics import Topic
-
-print("adviser things worked")
 
 
 
@@ -34,8 +31,8 @@ class CollegeAdviser(Service):
     Class for Handcrafted Natural Language Understanding Module (HDC-NLU).
     """
 
-    def __init__(self, domain: JSONLookupDomain, logger: DiasysLogger = DiasysLogger(),
-                 language: Language = None):
+    def __init__(self, domain: Domain = None, logger: DiasysLogger = DiasysLogger(),
+                language: Language = None):
         """
         Loads
             - domain key
@@ -47,13 +44,13 @@ class CollegeAdviser(Service):
         It sets the previous system act to None
 
         Args:
-            domain {domain.jsonlookupdomain.JSONLookupDomain} -- Domain
+            domain {Domain} -- Domain
         """
         Service.__init__(self, domain=domain)
         self.model_path = '/mount/studenten-temp1/users/zabereus/adviser/soloist_env/soloist/examples/college_bot/college_model'
         self.logger = logger
         self.language = language if language else Language.ENGLISH
-        self.domain_name = domain.get_domain_name()
+        self.domain_name = domain.get_domain_name() if domain else ""
         self.conversation_tracker = [] # to keep track of conversation between user and system
 
 
