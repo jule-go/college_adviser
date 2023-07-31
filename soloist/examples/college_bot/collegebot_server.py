@@ -164,8 +164,8 @@ def generate_for_queue(in_queue, out_queue):
 def fill_delex(pattern:str, rows: list):
 
     # if no results, but pattern has delex slot, append fail message
-    if len(rows) == 0:
-        return pattern + "nores" * int("[" in pattern)
+    if "[" in pattern and len(rows) == 0:
+        return "I couldn't find anything matching your query. Would you like to try again?" # pattern + "nores" * int("[" in pattern)
 
     fill_dict = rows[0] # {key: value for key, value in rows[0].items()} what was i smoking there
     #slot_dict
