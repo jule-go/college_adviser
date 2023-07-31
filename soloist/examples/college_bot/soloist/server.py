@@ -199,7 +199,7 @@ def sample(context):
     return res    
 
 
-def sample2(context, bs: str, db_state: str):
+def sample2(context, bs: str):
     global model, args, tokenizer
 
     system_token_id = tokenizer.convert_tokens_to_ids(['system'])
@@ -218,11 +218,11 @@ def sample2(context, bs: str, db_state: str):
     response = ' => belief :'
     response_id = tokenizer.convert_tokens_to_ids(tokenizer.tokenize(response))
     bs_ids = tokenizer.convert_tokens_to_ids(tokenizer.tokenize(bs))
-    db_state_ids = tokenizer.convert_tokens_to_ids(tokenizer.tokenize(db_state))
+    #db_state_ids = tokenizer.convert_tokens_to_ids(tokenizer.tokenize(db_state))
 
-    context_tokens = context_ids + response_id + bs_ids + db_state_ids
+    context_tokens = context_ids + response_id + bs_ids #+ db_state_ids
     #print(context_tokens)
-    token_type_ids = token_ids_for_context + system_token_id*len(response_id) + system_token_id*(len(bs_ids)+len(db_state_ids))
+    token_type_ids = token_ids_for_context + system_token_id*len(response_id) + system_token_id*(len(bs_ids))# +len(db_state_ids))
 
     out = sample_sequence(
             model=model,

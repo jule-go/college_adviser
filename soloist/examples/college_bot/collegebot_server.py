@@ -87,6 +87,30 @@ def predictor(context, bs=None, db_state=None):
     print(f"response {response}, bs {belief_states}")
     return response, belief_states
 
+def get_response(history: str):
+    print("now predicting...")
+    memory = []
+    _, belief_states = predictor(history)
+
+    if belief_states != {}:
+        t = []
+        for s,v in belief_states.items():
+            if s != "options":
+                t.append(f'{s} = {v}')
+        memory.append(' ; '.join(t))
+    print("memory", memory)
+
+    options, rows = query_from_db(beliefstate=memory[-1])
+
+    memory[-1] += f"; options = {options}" # = memory[-1].replace("options = \d", f"options = {options}")
+    response, _ = predictor([history[-1]], memory[-1])
+    
+
+    followup = fill_delex(response, rows)
+
+    return followup, belief_states
+
+
 global_counter = 0
 @app.route('/generate', methods=['GET','POST'])
 def generate_queue():
