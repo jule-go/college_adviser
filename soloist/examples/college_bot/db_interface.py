@@ -28,6 +28,7 @@ def query_from_db(beliefstate: str):
                 continue
 
             assert sign in "<>="
+
             # converting "area = architecture" to "architecture = 1"
             if key == "area":
                 key = value
@@ -35,12 +36,19 @@ def query_from_db(beliefstate: str):
             # allowing for aliases
             if key == "name":
                 query_conditions.append(f"(NAME LIKE '%{value}%' OR ALIAS LIKE '%{value}%')")
-            elif key == "state" or key == "region":
-                query_conditions.append(f"(STATE = '{value}' OR REGION = '{value}')")
+            elif key == "state" or key == "region" or key == "city":
+                query_conditions.append(f"(STATE = '{value}' OR REGION = '{value}' OR CITY = '{value}')")
+            elif key == "options":
+                pass
             else:
-                query_conditions.append("{}{}'{}'".format(column_dict[key], sign, value))
+                try:
+                    query_conditions.append("{}{}'{}'".format(column_dict[key], sign, value))
+                except KeyError:
+                    print("!")
+                    return 0, []
+
         query += " AND ".join(query_conditions)
-        print(query)
+        #print(query)
         rows = cursor.execute(query).fetchall()
 
         # convert db rows to dicts
@@ -55,18 +63,18 @@ def query_from_db(beliefstate: str):
         options = len(rows)
         return options, row_dicts
 
-def request_from_db(beliefstate: dict):
-    with closing(sqlite3.connect("pruned_v2.db")) as connection:
-        cursor = connection.cursor()
+# def request_from_db(beliefstate: dict):
+#     with closing(sqlite3.connect("pruned_v2.db")) as connection:
+#         cursor = connection.cursor()
 
-        query = "SELECT name FROM pruned_v2 WHERE 1=1"
-        for key, value in beliefstate["requests"].items():
-            #TODO
-            pass
+#         query = "SELECT name FROM pruned_v2 WHERE 1=1"
+#         for key, value in beliefstate["requests"].items():
+#             #TODO
+#             pass
 
-        rows = cursor.execute(query).fetchall()
-        options = len(rows)
-        db_state = []
-        return db_state
+#         rows = cursor.execute(query).fetchall()
+#         options = len(rows)
+#         db_state = []
+#         return db_state
 
 #query_from_db("belief : region = CA ; debt < 13000; area = engineering")

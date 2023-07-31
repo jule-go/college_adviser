@@ -69,7 +69,7 @@ class CollegeAdviser(Service):
         """
         available topics: user_utterance user_acts sys_state sys_act sys_utterance beliefstate
         """
-        print("arrived here")
+        #print("arrived here")
         user_utterance = gen_user_utterance
         self.dialogue_history += [user_utterance]
         system_utterance, beliefstate = get_response(self.dialogue_history)

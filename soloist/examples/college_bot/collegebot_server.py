@@ -79,8 +79,9 @@ def predictor(context, bs=None, db_state=None):
             context_formated.append(f'system : {i}')
             
     if bs:
-        sampled_results = sample2(context_formated, bs, db_state)
+        sampled_results = sample2(context_formated, bs)
     else:
+        #print(f"into server {context_formated}")
         sampled_results = sample(context_formated) #TODO oh that was bad, was [-1:]
     print("sampled results", sampled_results)
     belief_states, response = parse(sampled_results)
@@ -88,7 +89,7 @@ def predictor(context, bs=None, db_state=None):
     return response, belief_states
 
 def get_response(history: str):
-    print("now predicting...")
+    #print("now predicting...")
     memory = []
     _, belief_states = predictor(history)
 
@@ -98,7 +99,7 @@ def get_response(history: str):
             if s != "options":
                 t.append(f'{s} = {v}')
         memory.append(' ; '.join(t))
-    print("memory", memory)
+    #print("memory", memory)
 
     options, rows = query_from_db(beliefstate=memory[-1])
 

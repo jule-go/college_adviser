@@ -10,7 +10,7 @@ import torch
 import torch.nn.functional as F
 import numpy as np
 import logging
-import sys
+import sys, contextlib
 import dotmap
 
 sys.path.append('../../soloist/transformers/')
@@ -142,7 +142,9 @@ def main():
     args.model_type = args.model_type.lower()
     model_class, tokenizer_class = MODEL_CLASSES[args.model_type]
     tokenizer = tokenizer_class.from_pretrained(args.model_name_or_path)
-    model = model_class.from_pretrained(args.model_name_or_path)
+    
+    with contextlib.redirect_stdout(None):
+        model = model_class.from_pretrained(args.model_name_or_path)
     model.to(args.device)
     model.eval()
 
