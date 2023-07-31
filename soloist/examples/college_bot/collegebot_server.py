@@ -16,7 +16,7 @@ import os
 from queue import Queue
 from threading import Thread
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '8'
+os.environ['CUDA_VISIBLE_DEVICES'] = '1'
 os.environ['HF_MODELS_CACHE'] = '/mount/studenten-temp1/users/zabereus/adviser/soloist_env/soloist/cache'
 os.environ['TRANSFORMERS_CACHE'] = '/mount/studenten-temp1/users/zabereus/adviser/soloist_env/soloist/cache'
 
@@ -44,7 +44,10 @@ def parse(sampled_results):
         bs_state = {}
         for sv in svs:
             if '=' in sv:
-                s,v = sv.split('=')
+                try:
+                    s,v = sv.split('=')
+                except ValueError:
+                    continue
                 s = s.strip()
                 v = v.strip()
                 bs_state[s] = v
@@ -168,8 +171,12 @@ def fill_delex(pattern:str, rows: list):
     #slot_dict
     slots_to_fill = re.findall(r"\[(\S+)\]", pattern)
     if "name1" in pattern:
-        fill_dict["name1"] = rows[0]["name"]
-        fill_dict["name2"] = rows[1]["name"]
+        if len(rows) == 1:
+            pattern = "[name] could interest you. Do you want to know more about it?"
+            slots_to_fill = re.findall(r"\[(\S+)\]", pattern)
+        else:
+            fill_dict["name1"] = rows[0]["name"]
+            fill_dict["name2"] = rows[1]["name"]
     if "area" in pattern:
         pass # might not need that
     # TODO maybe sometimes alias

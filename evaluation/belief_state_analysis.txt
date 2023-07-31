@@ -1,0 +1,21 @@
+Output from running the entire college model on the automatically generated dialogues:
+    slots: 
+        {'FP': 355, 'FN': 89, 'TP': 149}
+        prec:  0.29563492063492064 	rec:  0.6260504201680672 	f1:  0.40161725067385445
+    values: 
+        {'FP': 345, 'FN': 89, 'TP': 159}
+        prec:  0.31547619047619047 	rec:  0.6411290322580645 	f1:  0.4228723404255319
+    slot values: 
+        {'FP': 366, 'FN': 110, 'TP': 138}
+        prec:  0.27380952380952384 	rec:  0.5564516129032258 	f1:  0.3670212765957447
+
+Output from running the manual_only model on the automatically generated dialogues:
+    slots: 
+        {'FP': 493, 'FN': 124, 'TP': 114}
+        prec:  0.18780889621087316 	rec:  0.4789915966386555 	f1:  0.2698224852071006
+    values: 
+        {'FP': 461, 'FN': 102, 'TP': 146}
+        prec:  0.24052718286655683 	rec:  0.5887096774193549 	f1:  0.3415204678362573
+    slot values: 
+        {'FP': 511, 'FN': 152, 'TP': 96}
+        prec:  0.15815485996705106 	rec:  0.3870967741935484 	f1:  0.22456140350877193

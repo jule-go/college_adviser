@@ -49,6 +49,8 @@ def query_from_db(beliefstate: str):
 
         query += " AND ".join(query_conditions)
         #print(query)
+        if not query_conditions:
+            query += " 1 = 1 "
         rows = cursor.execute(query).fetchall()
 
         # convert db rows to dicts
