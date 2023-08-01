@@ -1,0 +1,11 @@
+type,question,response
+base1,Can you give me a university in California?,i could n't find any colleges matching your query . would you like to try again ?
+base2,Can you give me a university in Pittsburgh?,i could n't find any colleges matching your query . would you like to try again ?
+base3,Can you give me a univeristy in the Southwest?,i found one college that might interest you : columbia university in the city of new york in new york . do you want to know more about it ?
+base4,Can you give me a private university?,i could n't find any colleges matching your query . would you like to try again ?
+base5,Can you give me an affordable university?,i could n't find any colleges matching your query . would you like to try again ?
+base6,Can you give me a university that has a Journalism bachelor's?,i could n't find any colleges matching your query . would you like to try again ?
+base7,Can you give me a university in Texas?,i could n't find any colleges matching your query . would you like to try again ?
+base8,Can you give me a university in Nashville?,i could n't find any colleges matching your query . would you like to try again ?
+base9,Can you give me a public university?,i could n't find any colleges matching your query . would you like to try again ?
+base10,Can you give me an expensive university?,i could n't find any colleges matching your query . would you like to try again ?

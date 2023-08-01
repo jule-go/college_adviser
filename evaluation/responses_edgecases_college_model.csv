@@ -1,0 +1,61 @@
+type,question,response
+base1,Can you give me a university in California?,university of michigan-ann arbor is a college in ann arbor and thus belongs to great lakes .
+base2,Can you give me a university in Pittsburgh?,"university of michigan-ann arbor is a public top university in ann arbor , michigan with 32100 undergraduate students . find out mor"
+base3,Can you give me a univeristy in the Southwest?,i could n't find any colleges matching your query . would you like to try again ?
+base4,Can you give me a private university?,university of michigan-ann arbor is a college in ann arbor and thus belongs to great lakes .
+base5,Can you give me an affordable university?,"i 'm sorry , i do n't have any information on this ."
+base6,Can you give me a university that has a Journalism bachelor's?,university of michigan-ann arbor is a college in ann arbor and thus belongs to great lakes .
+base7,Can you give me a university in Texas?,"i 'm sorry , i do n't have any information on this ."
+base8,Can you give me a university in Nashville?,"i 'm sorry , i do n't have any information on this ."
+base9,Can you give me a public university?,university of michigan-ann arbor is a college in ann arbor and thus belongs to great lakes .
+base10,Can you give me an expensive university?,university of michigan-ann arbor is a college in ann arbor and thus belongs to great lakes .
+2turn1,"['Can you give me a univeristy in Indiana?', 'Do they teach psychology there?']",they don ’ t offer [area] .
+2turn2,"['Can you give me a univeristy in Indiana?', ""Do they have a psychology bachelor's there?""]",they have a bachelor 's degree in psychology .
+2turn3,"['Can you give me a univeristy in Indiana?', 'Is the university affordable?']",its very expensive .
+2turn4,"['Can you give me a univeristy in Indiana?', ""What is the university's alias?""]",it 's alias is notre dame | fighting irish | nd .
+2turn5,"['Can you give me a univeristy in Indiana?', ""What is the university's website?""]",its website is www.nd.edu/ .
+2turn6,"['Can you give me a univeristy in Indiana?', 'Is the university public or private?']",the university is a private university .
+2turn7,"['Can you give me a univeristy in Indiana?', 'Is the university affordable?']",the average debt is 19000 .
+2turn8,"['Can you give me a univeristy in Indiana?', ""What is the university's admission rate?""]",the average admission rate is 15.1% .
+2turn9,"['Can you give me a univeristy in Indiana?', 'How much does it cost?']",it costs 76900 dollars per year .
+2turn10,"['Can you give me a univeristy in Indiana?', 'What is the debt of students there?']",9000 graduates earn about 84000 .
+negations1,Can you give me a university that is not in California?,"i 'm sorry , i do n't have any information on this ."
+negations2,Can you give me a university that is not Pittsburgh?,i could n't find any colleges matching your query . do you want to change something ?
+negations3,Can you give me a univeristy not in the Southwest?,"i 'm sorry , i do n't have any information on this ."
+negations4,Can you give me a university not in Nashville?,university of michigan-ann arbor is a college in ann arbor and thus belongs to great lakes .
+negations5,Can you give me an unaffordable university?,"i 'm sorry , i do n't have any information on this ."
+negations6,Can you give me a university that has no Journalism bachelor's?,i could n't find any colleges matching your query . do you want to change something ?
+negations7,Can you give me a university outside of Texas?,"university of southern california is a private top university in los angeles , california with 20600 undergraduate students . find out mor"
+negations8,Can you give me a non-private university?,"i 'm sorry , i do n't have any information on this ."
+negations9,Give me a university but don't give me a public university one.,"i 'm sorry , i do n't have any information on this ."
+negations10,Can you give me a university that is not so expensive?,"university of southern california is a private top university in los angeles , california with 20600 undergraduate students . find out mor"
+unknown1,Can you give me a university in Alaska?,university of michigan-ann arbor is a college in ann arbor and thus belongs to great lakes .
+unknown2,Can you give me a university where they have Electrician bachelor's?,"california polytechnic state university-san luis obispo is a public top university in san luis obispo , california with 21100 undergraduate students . you can chec"
+unknown3,Can you give me a univeristy whose alias is SSSS?,yale university is a college in new haven and thus belongs to new england .
+unknown4,Can you give me a university in Sofia?,"i 'm sorry , i do n't have any information on this ."
+unknown5,Can you give me a university in Germany?,"i 'm sorry , i do n't have any information on this ."
+unknown6,Can you give me a university where they have Dentist bachelor's?,i could n't find any colleges matching your query . do you want to change something ?
+unknown7,Can you tell me about Stuttgart university?,university of michigan-ann arbor is a college in ann arbor and thus belongs to great lakes .
+unknown8,Can you give me a university in Copenhagen?,"university of southern california is a private top university in los angeles , california with 20600 undergraduate students . find out mor"
+unknown9,Can you give me a technology university?,university of michigan-ann arbor is a college in ann arbor and thus belongs to great lakes .
+unknown10,Can you give me a nationalized university?,university of michigan-ann arbor is a college in ann arbor and thus belongs to great lakes .
+typo1,Can you gve me a university in California?,university of michigan-ann arbor is a college in ann arbor and thus belongs to great lakes .
+typo2,Can you give me a university in Pittsburh?,"university of southern california is a private top university in los angeles , california with 20600 undergraduate students . find out mor"
+typo3,Can you give me a univeristy in the Soutwest?,"harvard university is a private top university in cambridge , massachusetts with 7900 undergraduate students . find out mor"
+typo4,Can you give me a priate university?,"university of michigan-ann arbor is a public top university in ann arbor , michigan with 32100 undergraduate students . find out mor"
+typo5,Can you give me an eaffordabl university?,"i 'm sorry , i do n't have any information on this ."
+typo6,Can you give me a university that has a Jornalism bachelor's?,"i 'm sorry , i do n't have any information on this ."
+typo7,Can you give me a university in Texs?,"university of southern california is a private top university in los angeles , california with 20600 undergraduate students . find out mor"
+typo8,Can you give me a uoniversity in Nahville?,"i 'm sorry , i do n't have any information on this ."
+typo9,Can you give me a publi university?,university of michigan-ann arbor is a college in ann arbor and thus belongs to great lakes .
+typo10,Can you give me an xpensivez university?,"university of california-berkeley is a public top university in berkeley , california with 31800 undergraduate students . find out mor"
+paraphrase1,Can I get a university in California?,"university of southern california is a private top university in los angeles , california with 20600 undergraduate students . find out mor"
+paraphrase2,Tell me one university in Pittsburgh.,"university of michigan-ann arbor is a public top university in ann arbor , michigan with 32100 undergraduate students . find out mor"
+paraphrase3,I need a univeristy in the Southwest.,"i 'm sorry , i do n't have any information on this ."
+paraphrase4,Please give me a private university?,"university of michigan-ann arbor is a public top university in ann arbor , michigan with 32100 undergraduate students . find out mor"
+paraphrase5,I need an affordable university.,"university of california-berkeley is a public top university in berkeley , california with 31800 undergraduate students . find out mor"
+paraphrase6,Tell me about a university that has a Journalism bachelor's?,"i 'm sorry , i do n't have any information on this ."
+paraphrase7,Can you show me a college in Texas?,"i 'm sorry , i do n't have any information on this ."
+paraphrase8,Can you give me a uni in Nashville?,"i 'm sorry , i do n't have any information on this ."
+paraphrase9,Can you give me a public school?,"university of michigan-ann arbor is a public top university in ann arbor , michigan with 32100 undergraduate students . find out mor"
+paraphrase10,Can you give me an expensive college?,"university of california-berkeley is a public top university in berkeley , california with 31800 undergraduate students . find out mor"

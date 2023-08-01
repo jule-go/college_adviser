@@ -16,7 +16,11 @@ import os
 from queue import Queue
 from threading import Thread
 
+<<<<<<< HEAD
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+=======
+os.environ['CUDA_VISIBLE_DEVICES'] = '1'
+>>>>>>> 8a1d434dc4cae5a6e9ceed4c914446dc7c5c8a7e
 os.environ['HF_MODELS_CACHE'] = '/mount/studenten-temp1/users/zabereus/adviser/soloist_env/soloist/cache'
 os.environ['TRANSFORMERS_CACHE'] = '/mount/studenten-temp1/users/zabereus/adviser/soloist_env/soloist/cache'
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
@@ -45,7 +49,10 @@ def parse(sampled_results):
         bs_state = {}
         for sv in svs:
             if '=' in sv:
-                s,v = sv.split('=')
+                try:
+                    s,v = sv.split('=')
+                except ValueError:
+                    continue
                 s = s.strip()
                 v = v.strip()
                 bs_state[s] = v
@@ -172,10 +179,12 @@ def fill_delex(pattern:str, rows: list):
     #slot_dict
     slots_to_fill = re.findall(r"\[(\S+)\]", pattern)
     if "name1" in pattern:
-        fill_dict["name1"] = rows[0]["name"]
-        fill_dict["name2"] = rows[1]["name"]
-    # if "area" in pattern:
-    #     pass # might not need that
+        if len(rows) == 1:
+            pattern = "[name] could interest you. Do you want to know more about it?"
+            slots_to_fill = re.findall(r"\[(\S+)\]", pattern)
+        else:
+            fill_dict["name1"] = rows[0]["name"]
+            fill_dict["name2"] = rows[1]["name"]
     # TODO maybe sometimes alias
     for delex in slots_to_fill:
         try:
