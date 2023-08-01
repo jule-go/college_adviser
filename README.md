@@ -15,6 +15,8 @@ You need to install python and create a virtual environment (e.g. with help of c
 
 To be able to run the CollegeBot you need to have access to GPUs. You can specify the cuda device in the [``collegebot_server.py``-file](https://github.com/jule-go/college_adviser/blob/master/soloist/examples/college_bot/collegebot_server.py).
 
+The checkpoint of the trained soloist model is not included in this repository. This should not be a problem if you run the CollegeBot from the IMS servers. If this is not the case for you, please contact us.
+
 After activating the environment, make sure to be in the ``college_adviser`` directory. To use the CollegeBot run ``python test_full_system.py``. You can communicate with the bot by using the console. To end a conversation type "exit".
 
 ## Example Dialogues
