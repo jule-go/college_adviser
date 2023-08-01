@@ -1,3 +1,7 @@
+"""
+This file contains the interaction with the soloist model, handling of bs prediction, 
+response-generating and delexicalization-filling  
+"""
 from flask import Flask, request, Response, jsonify
 from flask import render_template
 from flask_cors import CORS
@@ -16,11 +20,7 @@ import os
 from queue import Queue
 from threading import Thread
 
-<<<<<<< HEAD
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
-=======
-os.environ['CUDA_VISIBLE_DEVICES'] = '1'
->>>>>>> 8a1d434dc4cae5a6e9ceed4c914446dc7c5c8a7e
 os.environ['HF_MODELS_CACHE'] = '/mount/studenten-temp1/users/zabereus/adviser/soloist_env/soloist/cache'
 os.environ['TRANSFORMERS_CACHE'] = '/mount/studenten-temp1/users/zabereus/adviser/soloist_env/soloist/cache'
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
@@ -32,7 +32,9 @@ rgi_queue = Queue(maxsize=0)
 rgo_queue = Queue(maxsize=0)
 
 def parse(sampled_results):
-    
+    """
+    Parses soloist LM outputs into bs + delex response 
+    """
     candidates = []
     for system_response in sampled_results:
         system_response = system_response.split('system :')[-1]
@@ -79,6 +81,11 @@ def compare(key1, key2):
         return -1  
 
 def predictor(context, bs=None, db_state=None):
+    """
+    Calls the soloist server's sample functions to get their output. Calls parse() to parse it and returns it as
+    tuple response, bs
+
+    """
     context_formated = []
     for idx, i in enumerate(context):
         if idx % 2 == 0:
@@ -97,6 +104,12 @@ def predictor(context, bs=None, db_state=None):
     return response, belief_states
 
 def get_response(history: str):
+    """
+    Main function, gets called from college_system.py
+    Calls predictor twice: once to get the bs prediction, then again to get the response after querying the 
+    database fot the correct db state.
+    Returns response (with delexicalized slots filled) and bs
+    """
     #print("now predicting...")
     memory = []
     _, belief_states = predictor(history)
@@ -120,6 +133,40 @@ def get_response(history: str):
     return followup, belief_states
 
 
+def fill_delex(pattern:str, rows: list):
+    """
+    Takes the delexicalized response as predicted by SOLOIST and fills it with the slots with the values 
+    from the database (that we got from the bs)
+    """
+
+    # if no results, but pattern has delex slot, print handwritten message
+    if  len(rows) == 0:
+        if "[" in pattern:
+            return "I couldn't find anything matching your query. Would you like to try again?" # pattern + "nores" * int("[" in pattern)
+        else:
+            return pattern
+
+    fill_dict = rows[0] # {key: value for key, value in rows[0].items()} what was i smoking there
+    #slot_dict
+    slots_to_fill = re.findall(r"\[(\S+)\]", pattern)
+    if "name1" in pattern:
+        if len(rows) == 1:
+            pattern = "[name] could interest you. Do you want to know more about it?"
+            slots_to_fill = re.findall(r"\[(\S+)\]", pattern)
+        else:
+            fill_dict["name1"] = rows[0]["name"]
+            fill_dict["name2"] = rows[1]["name"]
+    # TODO maybe sometimes alias
+    for delex in slots_to_fill:
+        try:
+            pattern = pattern.replace("["+ delex + "]", str(fill_dict[delex]))
+        except KeyError:
+            print(f"slot {delex} couldn't be filled")
+    return pattern
+
+
+
+"""The functions below are not used when using collegebot within adviser"""
 global_counter = 0
 @app.route('/generate', methods=['GET','POST'])
 def generate_queue():
@@ -165,34 +212,6 @@ def generate_for_queue(in_queue, out_queue):
         res['followup'] = followup
         out_queue.put(res)
         in_queue.task_done()
-
-def fill_delex(pattern:str, rows: list):
-
-    # if no results, but pattern has delex slot, append fail message
-    if  len(rows) == 0:
-        if "[" in pattern:
-            return "I couldn't find anything matching your query. Would you like to try again?" # pattern + "nores" * int("[" in pattern)
-        else:
-            return pattern
-
-    fill_dict = rows[0] # {key: value for key, value in rows[0].items()} what was i smoking there
-    #slot_dict
-    slots_to_fill = re.findall(r"\[(\S+)\]", pattern)
-    if "name1" in pattern:
-        if len(rows) == 1:
-            pattern = "[name] could interest you. Do you want to know more about it?"
-            slots_to_fill = re.findall(r"\[(\S+)\]", pattern)
-        else:
-            fill_dict["name1"] = rows[0]["name"]
-            fill_dict["name2"] = rows[1]["name"]
-    # TODO maybe sometimes alias
-    for delex in slots_to_fill:
-        try:
-            pattern = pattern.replace("["+ delex + "]", str(fill_dict[delex]))
-        except KeyError:
-            print(f"slot {delex} couldn't be filled")
-    return pattern
-
 
 # if __name__ == "__main__":
 #     # from soloist.server import *

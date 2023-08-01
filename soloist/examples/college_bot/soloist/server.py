@@ -203,6 +203,10 @@ def sample(context):
 
 
 def sample2(context, bs: str):
+    """
+    Not original to SOLOIST
+    Copy of sample, except bs is already given and we only get the response
+    """
     global model, args, tokenizer
 
     system_token_id = tokenizer.convert_tokens_to_ids(['system'])

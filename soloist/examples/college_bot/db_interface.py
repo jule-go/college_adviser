@@ -1,3 +1,4 @@
+""" Interaction with our database: Converts a bs into an SQL query and gets all relevant rows """
 import sqlite3, re
 from contextlib import closing
 
@@ -13,6 +14,10 @@ slots = list(column_dict.keys())
 #"belief": "belief : cuisine = German ; object_type = restaurant"
 
 def query_from_db(beliefstate: str):
+    """ 
+    Converts a bs into an SQL query and returns the number of results and the relevant rows.
+    Contains some functionality and error handling to account for weaknesses of the model
+    """
     with closing(sqlite3.connect("/mount/studenten-temp1/users/zabereus/adviser/soloist_env/soloist/examples/college_bot/pruned_v4.db")) as connection:
         cursor = connection.cursor()
 
