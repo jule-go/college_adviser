@@ -72,7 +72,8 @@ class CollegeAdviser(Service):
         #print("arrived here")
         user_utterance = gen_user_utterance
         self.dialogue_history += [user_utterance]
-        system_utterance, beliefstate = get_response(self.dialogue_history)
+        with contextlib.redirect_stdout(None):
+            system_utterance, beliefstate = get_response(self.dialogue_history)
         self.dialogue_history += [system_utterance]
 
         return {'sys_utterance': system_utterance}

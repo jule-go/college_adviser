@@ -16,9 +16,10 @@ import os
 from queue import Queue
 from threading import Thread
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '8'
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 os.environ['HF_MODELS_CACHE'] = '/mount/studenten-temp1/users/zabereus/adviser/soloist_env/soloist/cache'
 os.environ['TRANSFORMERS_CACHE'] = '/mount/studenten-temp1/users/zabereus/adviser/soloist_env/soloist/cache'
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
 
 app = Flask(__name__)
 CORS(app)
@@ -161,8 +162,11 @@ def generate_for_queue(in_queue, out_queue):
 def fill_delex(pattern:str, rows: list):
 
     # if no results, but pattern has delex slot, append fail message
-    if "[" in pattern and len(rows) == 0:
-        return "I couldn't find anything matching your query. Would you like to try again?" # pattern + "nores" * int("[" in pattern)
+    if  len(rows) == 0:
+        if "[" in pattern:
+            return "I couldn't find anything matching your query. Would you like to try again?" # pattern + "nores" * int("[" in pattern)
+        else:
+            return pattern
 
     fill_dict = rows[0] # {key: value for key, value in rows[0].items()} what was i smoking there
     #slot_dict
@@ -170,8 +174,8 @@ def fill_delex(pattern:str, rows: list):
     if "name1" in pattern:
         fill_dict["name1"] = rows[0]["name"]
         fill_dict["name2"] = rows[1]["name"]
-    if "area" in pattern:
-        pass # might not need that
+    # if "area" in pattern:
+    #     pass # might not need that
     # TODO maybe sometimes alias
     for delex in slots_to_fill:
         try:

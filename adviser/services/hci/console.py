@@ -64,6 +64,9 @@ class ConsoleInput(Service):
             return
 
         utterance = self._input()
+        if utterance == "exit":
+            print("Ending dialogue...")
+            return {Topic.DIALOG_END: False}
         # write into logging directory
         if self.conversation_log_dir is not None:
             with open(os.path.join(self.conversation_log_dir, (str(math.floor(time.time())) + "_user.txt")),

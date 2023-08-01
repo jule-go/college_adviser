@@ -9,7 +9,7 @@ from adviser.utils.topics import Topic
 
 # testing the system
 if __name__ == "__main__":
-    
+    print(">>> Hello, I'm CollegeBot. How can I help you?")
     domain_specific = False # do you want to specify the domain of the service?
 
     if domain_specific: # domain specific version

@@ -17,7 +17,8 @@ sys.path.append('../../soloist/transformers/')
 
 from transformers import GPT2Config, OpenAIGPTConfig
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
-
+from transformers.utils import logging
+logging.set_verbosity_error()
 
 MAX_LENGTH = int(10000)  # Hardcoded max length to avoid infinite loop
 
@@ -121,7 +122,7 @@ args.model_type = 'gpt2'
 args.model_name_or_path = 'kbbot'
 args.prompt = ''
 args.padding_text = ''
-args.length = 30
+args.length = 50
 args.num_samples = 1
 args.temperature = 1
 args.repetition_penalty = 1
