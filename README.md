@@ -17,7 +17,7 @@ To be able to run the CollegeBot you need to have access to GPUs. You can specif
 
 The checkpoint of the trained soloist model is not included in this repository. This should not be a problem if you run the CollegeBot from the IMS servers. If this is not the case for you, please contact us.
 
-After activating the environment, make sure to be in the ``college_adviser`` directory. To use the CollegeBot run ``python test_full_system.py``. You can communicate with the bot by using the console. To end a conversation type "exit".
+After activating the environment, make sure to be in the ``college_adviser`` directory. To use the CollegeBot run ``python test_full_system.py``. You can communicate with the bot by using the console. After typing "Goodbye" or similar, the dialogue ends.
 
 ## Example Dialogues
 
